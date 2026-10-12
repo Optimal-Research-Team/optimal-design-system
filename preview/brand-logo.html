@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+ html,body{margin:0;padding:0;width:700px;background:#FFFCF7;font-family:'Public Sans',sans-serif}
+ .wrap{padding:24px;display:flex;flex-direction:column;gap:18px}
+ .lab{font-size:11px;color:#76736D;letter-spacing:0;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+ .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+ .logo-card{border:1px solid #DDDCDB;border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:10px;background:#FFFCF7}
+ .logo-card.dark{background:#2C4E25}
+ .logo-card .body{display:flex;align-items:center;justify-content:center;padding:18px 0;min-height:70px}
+ .logo-card .body img{max-height:44px;max-width:240px;object-fit:contain}
+ .logo-card .meta{font-size:12px;color:#76736D;letter-spacing:-0.02em}
+ .logo-card.dark .meta{color:rgba(255,252,247,.7)}
+ .logo-card .meta b{display:block;color:#252525;font-weight:500;font-size:13px;margin-bottom:2px}
+ .logo-card.dark .meta b{color:#FFFCF7}
+ .row{display:flex;gap:12px;flex-wrap:wrap}
+ .sym{background:#FFFCF7;border:1px solid #DDDCDB;border-radius:8px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px;width:120px}
+ .sym.dark{background:#2C4E25;border-color:#2C4E25}
+ .sym img{width:56px;height:56px;object-fit:contain}
+ .sym span{font-size:11px;color:#76736D}
+ .sym.dark span{color:rgba(255,252,247,.7)}
+</style></head><body><div class="wrap">
+
+<div>
+  <div class="lab">Wordmark</div>
+  <div class="grid">
+    <div class="logo-card"><div class="body"><img src="../assets/logos/OptimalLogo-Green.png" alt=""></div><div class="meta"><b>OptimalLogo-Green</b>Primary · green on cream</div></div>
+    <div class="logo-card dark"><div class="body"><img src="../assets/logos/OptimalLogo-Opposite.png" alt=""></div><div class="meta"><b>OptimalLogo-Opposite</b>For dark surfaces</div></div>
+  </div>
+</div>
+
+<div>
+  <div class="lab">Symbol / mark</div>
+  <div class="row">
+    <div class="sym"><img src="../assets/logos/symbol-green-nobg.png" alt=""><span>symbol · green</span></div>
+    <div class="sym dark"><img src="../assets/logos/symbol-white.png" alt=""><span>symbol · white</span></div>
+    <div class="sym"><img src="../assets/logos/Optimal_Favicon_Transparent.png" alt=""><span>favicon</span></div>
+    <div class="sym"><img src="../assets/logos/Optimal_Logo_Inverted.png" alt=""><span>inverted</span></div>
+  </div>
+</div>
+
+<div>
+  <div class="lab">Clearspace · sizing</div>
+  <div style="background:#FFFCF7;border:1px dashed #76736D;border-radius:6px;padding:18px;display:flex;align-items:center;gap:18px">
+    <div style="position:relative;padding:16px">
+      <div style="position:absolute;inset:0;border:1px dashed rgba(44,78,37,.3);border-radius:4px"></div>
+      <img src="../assets/logos/OptimalLogo-Green.png" style="height:38px;display:block" alt="">
+    </div>
+    <div style="font-size:12px;color:#76736D;letter-spacing:-0.02em;line-height:1.5">
+      <b style="color:#252525;font-weight:500;display:block;margin-bottom:2px">Clearspace</b>
+      Minimum clearspace equals the cap-height of the "O" on all sides.<br>
+      Minimum reproduction size: <b style="color:#2C4E25">24px</b> tall on screen, <b style="color:#2C4E25">8mm</b> print.
+    </div>
+  </div>
+</div>
+
+</div></body></html>

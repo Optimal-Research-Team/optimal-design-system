@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;width:700px;height:210px;background:var(--cream-50);font-family:var(--p-family);color:var(--fg);}
+  .wrap{padding:20px;width:100%;height:100%;box-sizing:border-box;display:flex;flex-direction:column;gap:12px}
+  .row{display:flex;gap:12px;align-items:stretch}
+  .swatch{flex:1;min-width:0;border-radius:8px;overflow:hidden;border:1px solid var(--border-quiet);display:flex;flex-direction:column}
+  .swatch .top{flex:1;min-height:72px}
+  .swatch .meta{padding:8px 10px;background:var(--white);font-size:12px;line-height:1.3;color:var(--fg-strong)}
+  .swatch .meta b{display:block;font-family:var(--p-family);font-weight:500;letter-spacing:-0.02em;color:var(--fg-strong);font-size:13px}
+  .swatch .meta span{display:block;color:var(--fg-muted);font-size:11px;font-variant-numeric:tabular-nums;margin-top:2px}
+  .token{font-family:ui-monospace,Menlo,monospace}
+  .label{font-family:var(--p-family);font-size:12px;color:var(--fg-muted);letter-spacing:0}
+</style></head><body><div class="wrap">
+<div class="label">Alpha tokens — used for overlays, rings, badges, glass surfaces</div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;font-size:12px">
+  <div style="background:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300') center/cover;border-radius:6px;padding:10px;color:#fff;display:flex;align-items:flex-end">
+    <div style="background:rgba(0,0,0,0.35);backdrop-filter:blur(12px);padding:8px 10px;border-radius:18px;width:100%"><b>--nav-blur-bg</b><br><span class="token" style="opacity:.85">rgba(0,0,0,0.35) + blur(21px)</span></div>
+  </div>
+  <div style="background:#2C4E25;border-radius:6px;padding:10px;color:#FFFCF7;display:flex;align-items:center;justify-content:center">
+    <div style="background:rgba(255,255,255,0.25);backdrop-filter:blur(4px);padding:6px 8px;border-radius:22px"><b>--white-25</b><br><span class="token" style="opacity:.85">+ blur(4.945px)</span></div>
+  </div>
+  <div style="background:#FFFCF7;border-radius:6px;padding:10px;color:#2C4E25;display:flex;flex-direction:column;justify-content:center;gap:6px;border:1px solid #DDDCDB">
+    <div style="background:rgba(135,164,130,0.25);padding:4px 10px;border-radius:8px;color:#1A500F;font-weight:500">Grand opening</div>
+    <div class="token" style="color:#76736D">--sage-25 · rgba(135,164,130,0.25)</div>
+  </div>
+  <div style="background:#FFFCF7;border-radius:6px;padding:10px;display:flex;align-items:center;gap:8px;border:1px solid #DDDCDB;color:#2C4E25">
+    <div style="width:80px;height:26px;border-radius:50%;border:1.3px solid rgba(26,80,18,0.5);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:14px">wellness</div>
+    <div class="token" style="color:#76736D;font-size:11px">--forest-ring-50<br>rgba(26,80,18,0.5)</div>
+  </div>
+  <div style="background:#FFFCF7;border-radius:6px;padding:10px;display:flex;align-items:center;gap:8px;border:1px solid #DDDCDB;color:#2C4E25;font-size:12px">
+    <div style="width:40px;height:26px;border:1px solid rgba(255,255,255,0.5);border-radius:6px;background:#2C4E25"></div>
+    <div><b>--white-50</b><div class="token" style="color:#76736D">chip stroke on dark</div></div>
+  </div>
+  <div style="background:#2C4E25;border-radius:6px;padding:10px;color:rgba(255,255,255,0.9);font-size:12px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+    <b>Exclusive member access…</b>
+    <div class="token" style="opacity:.7">--white-90 · body on dark</div>
+  </div>
+</div></div></body></html>

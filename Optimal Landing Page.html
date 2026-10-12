@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Optimal — A longevity-focused family practice in Barrie</title>
+<meta name="description" content="A new kind of family clinic in Barrie, Ontario. Primary care, preventive medicine, and hormone health — built around you. Claim your free Optimal Starter.">
+<meta property="og:title" content="Optimal — A longevity-focused family practice in Barrie">
+<meta property="og:description" content="Primary care · Preventive medicine · Hormone health. Claim your free 30-minute Optimal Starter: InBody scan, clinic tour, and 15 minutes with an NP. No cost. No sales pitch.">
+<link rel="icon" href="assets/logos/Optimal_Favicon_Transparent.png">
+<link rel="stylesheet" href="colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<style>
+  html,body{margin:0;padding:0;background:#FFFCF7;color:#040504;font-family:'Public Sans',sans-serif;letter-spacing:-0.02em;-webkit-font-smoothing:antialiased}
+  .site{max-width:1440px;margin:0 auto}
+  section{padding:96px 76px;position:relative}
+  section + section{border-top:1px solid #DDDCDB}
+  h2.display{font-family:Castoro,serif;font-size:64px;font-weight:400;line-height:1;letter-spacing:-0.04em;color:#252525;margin:0}
+  h2.display em{font-style:italic}
+  .eyebrow{font-family:'Public Sans';font-weight:700;font-size:14px;letter-spacing:0.12em;text-transform:uppercase;color:#2C4E25;display:block;margin-bottom:14px}
+
+  /* HERO */
+  .hero{padding:0;height:820px;position:relative;overflow:hidden;color:#fff}
+  .hero .bg{position:absolute;inset:0;background:linear-gradient(rgba(37,56,33,0) 0%, rgba(37,56,33,.95) 100%), url('assets/images/hero-clinic.png') center/cover}
+  .banner{position:absolute;left:0;top:0;right:0;padding:10px 0;text-align:center;background:#FFFCF7;color:#040504;font-family:'Public Sans';font-size:14px;letter-spacing:-0.02em;border-bottom:1px solid #DFD7CA;z-index:3}
+  .banner .new{background:#2C4E25;color:#FFFCF7;font-weight:700;font-size:11px;padding:3px 7px;border-radius:4px;margin-right:10px;letter-spacing:0}
+  .nav{position:absolute;top:54px;left:50%;transform:translateX(-50%);z-index:3;display:flex;align-items:center;gap:4px;padding:8px;background:rgba(0,0,0,.35);-webkit-backdrop-filter:blur(21px);backdrop-filter:blur(21px);border-radius:54px;color:#FFFCF7;font-size:15px}
+  .nav .logo{padding:0 14px}.nav .logo img{height:22px;display:block}
+  .nav a{padding:10px 16px;color:#FFFCF7;text-decoration:none;border-radius:48px;letter-spacing:-0.02em}
+  .nav a:hover{background:rgba(255,255,255,.1)}
+  .nav .cta{background:#2C4E25;color:#FFFCF7;padding:10px 20px;border-radius:48px;box-shadow:0 4px 13.5px rgba(135,164,130,.45);font-weight:500}
+  .hero-content{position:absolute;left:76px;bottom:96px;z-index:2;max-width:1000px}
+  .hero-content h1{font-family:Castoro,serif;font-size:84px;font-weight:400;line-height:1;letter-spacing:-0.04em;color:#fff;margin:0 0 18px;max-width:980px}
+  .hero-content h1 em{font-style:italic}
+  .hero-content p.sub{font-family:'Public Sans';font-size:24px;letter-spacing:-0.02em;line-height:1.4;color:#fff;margin:0 0 14px;max-width:820px}
+  .hero-content .desc{font-family:'Public Sans';font-size:15px;letter-spacing:0.04em;color:rgba(255,255,255,.8);margin:0 0 32px;text-transform:uppercase;font-weight:500}
+  .hero-content .desc span{margin:0 10px;opacity:.5}
+  .hero-ctas{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .btn-big{background:#FFFCF7;color:#2C4E25;padding:16px 30px;border-radius:48px;font-family:'Public Sans';font-weight:500;font-size:20px;letter-spacing:-0.02em;border:0;cursor:pointer;box-shadow:0 4px 25px rgba(0,0,0,.16);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+  .btn-big:hover{background:#fff}
+  .btn-sub{font-size:14px;color:rgba(255,255,255,.85);letter-spacing:-0.02em;line-height:1.4}
+  .btn-green{background:#2C4E25;color:#FFFCF7;padding:14px 26px;border-radius:48px;font-family:'Public Sans';font-weight:500;font-size:18px;letter-spacing:-0.02em;border:0;cursor:pointer;box-shadow:0 4px 13.5px rgba(135,164,130,.45);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+  .offer .btn-green,.offer .btn-green *{color:#FFFFFF}
+  .hero-micro{margin-top:22px;font-family:'Public Sans';font-size:14px;font-style:italic;color:rgba(255,255,255,.75);letter-spacing:-0.02em}
+
+  /* CREDIBILITY STRIP */
+  .cred{padding:22px 76px;background:#2C4E25;color:#FFFCF7;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-family:'Public Sans';font-size:14px;letter-spacing:-0.02em;border-top:0}
+  .cred-item{display:flex;align-items:center;gap:10px}
+  .cred-item iconify-icon{color:#87A482;font-size:18px}
+  .cred-item b{font-weight:500}
+
+  /* OFFER BAND */
+  .offer{background:#FFFCF7;padding:80px 76px;border-top:0}
+  .offer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:start}
+  .offer-left h2{margin-bottom:18px}
+  .offer-left h2 em{font-style:italic}
+  .offer-left .lede{font-family:'Public Sans';font-size:22px;line-height:1.35;letter-spacing:-0.02em;color:#2C4E25;margin:0 0 26px;max-width:480px}
+  .offer-left .reassure{font-family:'Public Sans';font-size:16px;line-height:1.5;color:#474747;letter-spacing:-0.02em;margin:0 0 28px;max-width:460px}
+  .offer-left .cta-row{display:flex;align-items:center;gap:20px}
+  .offer-left .total{margin-top:22px;font-family:Castoro,serif;font-size:22px;letter-spacing:-0.04em;color:#252525}
+  .offer-left .total em{font-style:italic;color:#1A500F}
+  .value-stack{background:#F2EEE4;border:1px solid #2C4E25;border-radius:8px;padding:8px 0;box-shadow:0 4px 25px rgba(0,0,0,.04)}
+  .value-row{display:grid;grid-template-columns:28px 1fr auto;gap:14px;padding:16px 24px;border-bottom:1px solid rgba(44,78,37,.12);align-items:flex-start}
+  .value-row:last-child{border-bottom:0}
+  .value-row iconify-icon{color:#2C4E25;font-size:22px;margin-top:2px}
+  .value-row .t{font-family:'Public Sans';font-size:16px;letter-spacing:-0.02em;line-height:1.4;color:#040504}
+  .value-row .t b{font-weight:600;font-family:Castoro,serif;font-weight:400;font-size:19px;letter-spacing:-0.04em;display:block;margin-bottom:2px;color:#2C4E25}
+  .value-row .v{font-family:'Public Sans';font-size:13px;color:#76736D;letter-spacing:-0.02em;white-space:nowrap;padding-top:4px}
+  .value-row .v.free{color:#1A500F;font-weight:600}
+
+  /* INTRO / WHAT WE DO */
+  .pillars{padding-top:112px;padding-bottom:96px;text-align:center}
+  .pillars h2{max-width:900px;margin:0 auto}
+  .pillars h2 em{font-style:italic}
+  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:72px;text-align:left}
+  .pillar{border:1px solid #2C4E25;border-radius:8px;padding:32px 28px;background:#FFFCF7;display:flex;flex-direction:column;gap:14px;min-height:220px}
+  .pillar .p-tag{font-family:'Public Sans';font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#87A482}
+  .pillar .p-title{font-family:Castoro,serif;font-size:30px;font-weight:400;letter-spacing:-0.04em;line-height:1.05;color:#2C4E25}
+  .pillar .p-title em{font-style:italic}
+  .pillar p{font-family:'Public Sans';font-size:16px;line-height:1.45;letter-spacing:-0.02em;color:#474747;margin:0}
+
+  /* NARRATIVE */
+  .narr{padding:120px 76px;background:#FFFCF7;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .narr .left h2{margin-bottom:28px}
+  .narr .left h2 em{font-style:italic}
+  .narr .left p{font-family:'Public Sans';font-size:20px;line-height:1.5;letter-spacing:-0.02em;color:#252525;margin:0 0 18px;max-width:520px}
+  .narr .left p.close{font-family:Castoro,serif;font-size:26px;line-height:1.25;letter-spacing:-0.04em;color:#2C4E25;margin-top:28px}
+  .narr .left p.close em{font-style:italic}
+  .narr-img{border-radius:16px;overflow:hidden;height:520px;box-shadow:0 12px 40px rgba(0,0,0,.12)}
+  .narr-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* INCLUSIONS */
+  .incl{padding-top:112px;padding-bottom:112px}
+  .incl h2{text-align:center;max-width:900px;margin:0 auto 20px}
+  .incl h2 em{font-style:italic}
+  .incl .sub{text-align:center;font-family:'Public Sans';font-size:18px;color:#474747;letter-spacing:-0.02em;max-width:640px;margin:0 auto 60px;line-height:1.5}
+  .incl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 36px}
+  .inc-item{display:flex;gap:18px;align-items:flex-start}
+  .inc-item .dot{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:rgba(135,164,130,.25);display:flex;align-items:center;justify-content:center}
+  .inc-item .dot iconify-icon{color:#2C4E25;font-size:20px}
+  .inc-item h3{font-family:Castoro,serif;font-size:22px;font-weight:400;letter-spacing:-0.04em;color:#252525;margin:0 0 6px;line-height:1.15}
+  .inc-item p{font-family:'Public Sans';font-size:15px;line-height:1.5;letter-spacing:-0.02em;color:#474747;margin:0;max-width:440px}
+
+  /* FACILITY */
+  .facility{padding:112px 76px;background:#2C4E25;color:#FFFCF7}
+  .facility h2{color:#FFFCF7;max-width:780px;margin-bottom:22px}
+  .facility h2 em{font-style:italic}
+  .facility p.lede{font-family:'Public Sans';font-size:20px;line-height:1.5;letter-spacing:-0.02em;color:rgba(255,255,255,.88);max-width:720px;margin:0 0 56px}
+  .photo-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px 220px;gap:14px}
+  .photo-grid .cell{border-radius:12px;overflow:hidden;position:relative;background:#253821;display:flex;align-items:flex-end;padding:16px;color:#FFFCF7;font-family:'Public Sans';font-size:13px;letter-spacing:-0.02em}
+  .photo-grid .cell::before{content:'';position:absolute;inset:0;background-size:cover;background-position:center}
+  .photo-grid .cell::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55))}
+  .photo-grid .cell span{position:relative;z-index:2}
+  .photo-grid .c1{grid-row:span 2}
+  .photo-grid .c1::before{background-image:url('assets/images/hero-clinic.png')}
+  .photo-grid .c2::before{background-image:url('assets/images/doctor-tablet-patient.jpg')}
+  .photo-grid .c3::before{background-image:url('assets/images/footer-forest.jpg')}
+  .photo-grid .c4::before{background-image:url('assets/images/hero-detail.png')}
+  .photo-grid .c5::before{background-image:url('assets/images/mobile-hero.jpg')}
+
+  /* TEAM */
+  .team{padding-top:112px;padding-bottom:112px}
+  .team h2{margin-bottom:14px}
+  .team h2 em{font-style:italic}
+  .team p.sub{font-family:'Public Sans';font-size:18px;color:#474747;letter-spacing:-0.02em;max-width:700px;margin:0 0 56px;line-height:1.5}
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .member{display:flex;flex-direction:column;gap:12px}
+  .portrait{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:5px solid #fff;box-shadow:0 0 0 1px rgba(44,78,37,.15),0 4px 16px rgba(0,0,0,.06);background:#E7E2D9;max-width:280px;margin:0 auto}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+  .portrait.initials{display:flex;align-items:center;justify-content:center;color:#87A482;font-family:Castoro;font-size:56px;font-style:italic}
+  .member .n{font-family:Castoro,serif;font-size:26px;letter-spacing:-0.04em;color:#252525;line-height:1.1;margin-top:10px}
+  .member .role{font-family:'Public Sans';font-size:14px;color:#2C4E25;letter-spacing:-0.02em;line-height:1.4;font-weight:500}
+  .member p{font-family:'Public Sans';font-size:15px;color:#474747;letter-spacing:-0.02em;line-height:1.5;margin:0}
+  .team .promise{margin-top:56px;padding:28px 32px;border:1px solid #2C4E25;border-radius:8px;font-family:Castoro,serif;font-size:26px;letter-spacing:-0.04em;color:#252525;line-height:1.3;background:#FFFCF7;max-width:960px}
+  .team .promise em{font-style:italic;color:#2C4E25}
+
+  /* VIGNETTE / SOCIAL PROOF */
+  .vignette{padding:112px 76px;background:#E7E2D9}
+  .vignette .eyebrow{margin-bottom:24px}
+  .vignette h2{margin-bottom:48px}
+  .vignette h2 em{font-style:italic}
+  .vig-card{background:#FFFCF7;border-radius:12px;padding:48px 52px;box-shadow:0 4px 25px rgba(0,0,0,.08);max-width:1100px}
+  .vig-head{display:flex;align-items:center;gap:20px;padding-bottom:28px;border-bottom:1px solid rgba(44,78,37,.15);margin-bottom:28px}
+  .vig-head .ava{width:72px;height:72px;border-radius:50%;overflow:hidden;background:#87A482;flex-shrink:0}
+  .vig-head .ava img{width:100%;height:100%;object-fit:cover}
+  .vig-head .name{font-family:Castoro,serif;font-size:28px;letter-spacing:-0.04em;color:#252525}
+  .vig-head .meta{font-family:'Public Sans';font-size:14px;color:#76736D;letter-spacing:-0.02em;margin-top:2px}
+  .vig-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 48px}
+  .vig-grid h4{font-family:'Public Sans';font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#2C4E25;margin:0 0 8px}
+  .vig-grid p{font-family:'Public Sans';font-size:16px;line-height:1.5;letter-spacing:-0.02em;color:#252525;margin:0}
+  .vig-grid .outcome{grid-column:span 2;padding:22px 24px;background:rgba(135,164,130,.15);border-radius:8px;margin-top:6px}
+  .vig-grid .outcome p{font-family:Castoro,serif;font-size:22px;letter-spacing:-0.04em;line-height:1.3;color:#1A500F}
+  .vig-grid .outcome p em{font-style:italic}
+
+  /* COMPARE */
+  .compare{padding-top:112px;padding-bottom:112px}
+  .compare h2{text-align:left;margin-bottom:14px}
+  .compare h2 em{font-style:italic}
+  .compare .sub{font-family:'Public Sans';font-size:18px;color:#474747;letter-spacing:-0.02em;max-width:720px;margin:0 0 48px;line-height:1.5}
+  .compare-table{display:grid;grid-template-columns:1.4fr 200px 160px 180px 180px;font-family:'Public Sans';margin-bottom:32px}
+  .compare-table > div{padding:14px 12px;border-bottom:1px solid rgba(4,5,4,.2);font-size:15px;letter-spacing:-0.02em;color:#040504}
+  .compare-table .h{font-weight:500;color:#76736D;font-size:13px;text-align:center;padding:14px 12px;text-transform:uppercase;letter-spacing:0.08em;border-bottom:1px solid #040504}
+  .compare-table .h.optimal{background:#2C4E25;color:#FFFCF7;border-radius:8px 8px 0 0;padding:16px 12px;font-size:14px;border-bottom:0}
+  .compare-table .cell{text-align:center;font-size:14px}
+  .compare-table .cell.optimal{background:#2C4E25;color:#FFFCF7;font-weight:500}
+  .compare-table .cell.optimal:last-of-type{border-radius:0 0 8px 8px}
+  .compare-table iconify-icon[data-y]{color:#1A500F;font-size:20px}
+  .compare-table .cell.optimal iconify-icon[data-y]{color:#FFFCF7}
+  .compare-table iconify-icon[data-n]{color:#BBBBBB;font-size:18px}
+  .compare-table .price-row > div{font-family:Castoro,serif;font-size:20px;letter-spacing:-0.04em;padding-top:18px;padding-bottom:18px}
+  .compare-table .price-row .first{font-family:'Public Sans';font-size:14px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#76736D}
+  .ideal-if{display:grid;grid-template-columns:200px 1fr;gap:8px 32px;border-top:1px solid rgba(4,5,4,.15);padding-top:24px;margin-bottom:24px}
+  .ideal-if .l{font-family:Castoro,serif;font-size:20px;letter-spacing:-0.04em;color:#2C4E25;font-style:italic}
+  .ideal-if .r{font-family:'Public Sans';font-size:15px;line-height:1.4;letter-spacing:-0.02em;color:#252525;padding-top:4px}
+  .ohip-note{font-family:'Public Sans';font-size:13px;line-height:1.5;color:#76736D;letter-spacing:-0.02em;font-style:italic;max-width:900px;margin-top:16px}
+
+  /* PRICING */
+  .pricing{padding-top:112px;padding-bottom:32px}
+  .pricing h2{text-align:center;margin-bottom:14px}
+  .pricing h2 em{font-style:italic}
+  .pricing p.sub{text-align:center;font-family:'Public Sans';font-size:18px;color:#474747;letter-spacing:-0.02em;max-width:600px;margin:0 auto 56px;line-height:1.5}
+  .price-card{max-width:800px;margin:0 auto;background:linear-gradient(180deg,#2C4E25,#1C3118);border-radius:12px;padding:56px 52px;color:#FFFCF7;box-shadow:0 4px 25px rgba(0,0,0,.15);text-align:center}
+  .price-card .n{font-family:Castoro,serif;font-size:32px;letter-spacing:-0.04em;font-weight:400;margin-bottom:14px}
+  .price-card .n em{font-style:italic}
+  .price-amt{font-family:Castoro,serif;font-size:80px;letter-spacing:-0.04em;line-height:1;margin:14px 0 8px}
+  .price-amt small{font-size:22px;font-family:'Public Sans';font-weight:400;letter-spacing:-0.02em;opacity:.8;margin-left:4px}
+  .price-alt{font-family:'Public Sans';font-size:16px;color:rgba(255,255,255,.85);letter-spacing:-0.02em}
+  .price-alt em{font-style:italic;color:#87A482;margin-left:6px}
+  .price-desc{font-family:'Public Sans';font-size:16px;line-height:1.5;letter-spacing:-0.02em;color:rgba(255,255,255,.85);margin:22px auto 28px;max-width:460px}
+  .guarantees{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:720px;margin:28px auto 32px;text-align:left}
+  .guar{display:flex;gap:10px;align-items:flex-start;font-family:'Public Sans';font-size:13px;line-height:1.4;letter-spacing:-0.02em;color:rgba(255,255,255,.9)}
+  .guar iconify-icon{color:#87A482;font-size:18px;flex-shrink:0;margin-top:1px}
+  .guar b{display:block;color:#FFFCF7;font-weight:600;margin-bottom:2px}
+  .price-card .btn-big{background:#FFFCF7;color:#2C4E25}
+
+  /* IS THIS FOR ME */
+  .isfor{padding-top:112px;padding-bottom:112px;background:#E7E2D9}
+  .isfor h2{text-align:center;margin-bottom:56px}
+  .isfor h2 em{font-style:italic}
+  .isfor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:1180px;margin:0 auto}
+  .isfor-col{background:#FFFCF7;border-radius:12px;padding:40px 38px;border:1px solid rgba(44,78,37,.15)}
+  .isfor-col.neg{background:#FFFCF7;border-color:rgba(118,115,109,.3)}
+  .isfor-col h3{font-family:Castoro,serif;font-size:28px;letter-spacing:-0.04em;color:#2C4E25;margin:0 0 24px;font-weight:400;line-height:1.2}
+  .isfor-col.neg h3{color:#76736D}
+  .isfor-col h3 em{font-style:italic}
+  .isfor-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px}
+  .isfor-col li{display:flex;gap:12px;align-items:flex-start;font-family:'Public Sans';font-size:16px;line-height:1.5;letter-spacing:-0.02em;color:#252525}
+  .isfor-col li iconify-icon{flex-shrink:0;font-size:20px;margin-top:2px}
+  .isfor-col.pos li iconify-icon{color:#2C4E25}
+  .isfor-col.neg li iconify-icon{color:#B6B4AF}
+  .isfor-col.neg li{color:#474747}
+
+  /* FAQ */
+  .faq{padding-top:112px;padding-bottom:112px}
+  .faq h2{margin-bottom:48px}
+  .faq h2 em{font-style:italic;position:relative;display:inline-block}
+  .faq h2 em::after{content:'';position:absolute;inset:-4px -2px;border:1.3px solid rgba(26,80,18,0.5);border-radius:50%;transform:rotate(-2deg)}
+  .faq-list{border-top:1px solid #040504}
+  .faq-row{border-bottom:1px solid #040504;padding:22px 8px;cursor:pointer}
+  .faq-row .q{display:flex;justify-content:space-between;align-items:center;font-family:'Public Sans';font-size:17px;color:#040504;letter-spacing:-0.02em;font-weight:500}
+  .faq-row .q iconify-icon{font-size:22px;transition:transform .2s;color:#2C4E25}
+  .faq-row.open .q iconify-icon{transform:rotate(180deg)}
+  .faq-row .a{font-family:'Public Sans';font-size:15px;line-height:1.55;color:#474747;letter-spacing:-0.02em;max-width:820px;margin-top:0;max-height:0;overflow:hidden;transition:max-height .3s,margin-top .3s}
+  .faq-row.open .a{max-height:400px;margin-top:14px}
+
+  /* FINAL CTA */
+  .final{padding:128px 76px;text-align:center;background:#FFFCF7}
+  .final h2{font-family:Castoro,serif;font-size:72px;font-weight:400;line-height:1.05;letter-spacing:-0.04em;color:#252525;max-width:1100px;margin:0 auto 24px}
+  .final h2 em{font-style:italic;position:relative;display:inline-block}
+  .final h2 em::after{content:'';position:absolute;inset:-4px -10px;border:1.3px solid rgba(26,80,18,0.5);border-radius:50%;transform:rotate(-2deg)}
+  .final p{font-family:'Public Sans';font-size:19px;line-height:1.5;letter-spacing:-0.02em;color:#474747;max-width:720px;margin:0 auto 36px}
+  .final .btn-green{font-size:22px;padding:18px 36px}
+  .final .text-us{margin-top:32px;font-family:'Public Sans';font-size:15px;color:#76736D;letter-spacing:-0.02em}
+  .final .text-us a{color:#2C4E25;text-decoration:underline}
+
+  /* FOOTER */
+  footer{background:#2C4E25;color:#FFFCF7;padding:72px 76px 32px;font-family:'Public Sans';font-size:14px;letter-spacing:-0.02em;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px}
+  footer .logo img{height:34px;display:block;margin-bottom:18px}
+  footer .tagline{max-width:320px;color:rgba(255,255,255,.8);font-size:13px;line-height:1.5;margin-bottom:20px}
+  footer .legitscript{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(255,255,255,.3);border-radius:6px;color:#FFFCF7;text-decoration:none;font-size:12px;letter-spacing:0.02em}
+  footer .legitscript iconify-icon{color:#87A482;font-size:16px}
+  footer h4{font-family:'Public Sans';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#87A482;margin:0 0 16px}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;color:rgba(255,255,255,.85)}
+  footer a{color:inherit;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  footer .legal{grid-column:span 4;padding-top:32px;margin-top:24px;border-top:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.55);font-size:12px;display:flex;justify-content:space-between}
+
+  /* STICKY MOBILE CTA */
+  .sticky-m{display:none}
+  @media (max-width:820px){
+    section{padding:64px 24px}
+    .hero{height:auto;min-height:720px}
+    .hero-content{left:24px;right:24px;bottom:56px}
+    .hero-content h1{font-size:48px}
+    .hero-content p.sub{font-size:18px}
+    .nav a:not(.cta){display:none}
+    .nav{top:48px;width:calc(100% - 48px)}
+    h2.display{font-size:40px}
+    .cred{padding:20px 24px;gap:14px}
+    .offer{padding:56px 24px}
+    .offer-inner{grid-template-columns:1fr;gap:32px}
+    .pillar-grid,.incl-grid,.isfor-grid,.vig-grid{grid-template-columns:1fr}
+    .narr{grid-template-columns:1fr;gap:32px;padding:64px 24px}
+    .narr-img{height:320px}
+    .photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+    .photo-grid .c1{grid-row:auto;grid-column:span 2;height:220px}
+    .photo-grid .cell{height:160px}
+    .team-grid{grid-template-columns:1fr}
+    .compare-table{grid-template-columns:1.4fr 120px 100px 120px 120px;font-size:12px}
+    .compare-table > div{padding:10px 6px;font-size:12px}
+    .price-card{padding:40px 24px}
+    .price-amt{font-size:56px}
+    .guarantees{grid-template-columns:1fr}
+    .final h2{font-size:44px}
+    footer{grid-template-columns:1fr 1fr;gap:32px}
+    .sticky-m{display:flex;position:fixed;bottom:0;left:0;right:0;padding:12px 16px;background:#FFFCF7;border-top:1px solid #DDDCDB;z-index:50;box-shadow:0 -4px 20px rgba(0,0,0,.08)}
+    .sticky-m a{flex:1;background:#2C4E25;color:#FFFCF7;text-align:center;padding:14px 16px;border-radius:48px;font-family:'Public Sans';font-weight:500;font-size:16px;letter-spacing:-0.02em;text-decoration:none}
+    body{padding-bottom:72px}
+  }
+</style>
+</head>
+<body class="oh">
+<div class="site">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="bg"></div>
+  <div class="banner"><span class="new">NEW</span>Now welcoming our first 100 members at the new Barrie clinic →</div>
+  <nav class="nav">
+    <span class="logo"><img src="assets/logos/OptimalLogo-Opposite.png" alt="Optimal"></span>
+    <a href="#pillars">What we do</a>
+    <a href="#team">Team</a>
+    <a href="#compare">Compare</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#offer" class="cta">Claim your Starter</a>
+  </nav>
+  <div class="hero-content">
+    <h1>A new kind of family clinic is here.</h1>
+    <p class="sub">A longevity-focused family practice, built to help you live better, longer.</p>
+    <p class="desc">Primary care<span>·</span>Preventive medicine<span>·</span>Hormone health<span>·</span>Barrie, Ontario</p>
+    <div class="hero-ctas">
+      <a href="#offer" class="btn-big">Claim your free Optimal Starter <iconify-icon icon="tabler:arrow-right"></iconify-icon></a>
+      <div class="btn-sub">No cost. No sales pitch.<br>Yours to keep.</div>
+    </div>
+    <div class="hero-micro">Now welcoming our first 100 members at the new clinic.</div>
+  </div>
+</section>
+
+<!-- CREDIBILITY STRIP -->
+<div class="cred">
+  <div class="cred-item"><iconify-icon icon="tabler:map-pin"></iconify-icon><b>Locally owned in Barrie</b></div>
+  <div class="cred-item"><iconify-icon icon="tabler:stethoscope"></iconify-icon><b>Led by Nurse Practitioners</b></div>
+  <div class="cred-item"><iconify-icon icon="tabler:users"></iconify-icon><b>370+ active members</b></div>
+  <div class="cred-item"><iconify-icon icon="tabler:building-hospital"></iconify-icon><b>New clinic, opened 2026</b></div>
+  <div class="cred-item"><iconify-icon icon="tabler:shield-check"></iconify-icon><b>LegitScript certified</b></div>
+</div>
+
+<!-- OFFER BAND -->
+<section class="offer" id="offer">
+  <div class="offer-inner">
+    <div class="offer-left">
+      <h2 class="display">The Optimal <em>Starter</em></h2>
+      <p class="lede">A free 30-minute visit. For adults considering a new family practice.</p>
+      <p class="reassure">Get a free body composition scan and meet with our NP clinical team. A zero-fee visit with no obligation to join.</p>
+      <div class="cta-row">
+        <a href="#" class="btn-green">Get my Scan <iconify-icon icon="tabler:arrow-right"></iconify-icon></a>
+      </div>
+      <div class="total">Total value: <em>$150+</em>. Your cost: <em>$0</em>.</div>
+    </div>
+    <div class="value-stack">
+      <div class="value-row">
+        <iconify-icon icon="lets-icons:check-fill"></iconify-icon>
+        <div class="t"><b>InBody body-composition scan</b>A 60-second scan — see your muscle mass, body fat, and hydration. Get a printed report to take home.</div>
+        <div class="v">$75 value</div>
+      </div>
+      <div class="value-row">
+        <iconify-icon icon="lets-icons:check-fill"></iconify-icon>
+        <div class="t"><b>Tour of our new Barrie clinic</b>Get a tour of our newly finished best-in-class facility with onsite testing and amenities.</div>
+        <div class="v free">Included</div>
+      </div>
+      <div class="value-row">
+        <iconify-icon icon="lets-icons:check-fill"></iconify-icon>
+        <div class="t"><b>Meet with a Nurse Practitioner</b>Talk about your health goals and figure out if our team is right for you.</div>
+        <div class="v">$75 value</div>
+      </div>
+      <div class="value-row">
+        <iconify-icon icon="lets-icons:check-fill"></iconify-icon>
+        <div class="t"><b>Coffee or tea — on us</b>You'll be here 30 minutes; we'll treat you like a guest.</div>
+        <div class="v free">On the house</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="pillars" id="pillars">
+  <span class="eyebrow">What we do</span>
+  <h2 class="display">Comprehensive care for the <em>whole you</em>.</h2>
+  <div class="pillar-grid">
+    <div class="pillar">
+      <span class="p-tag">01 / PRIMARY CARE</span>
+      <span class="p-title">Family <em>primary care</em></span>
+      <p>Your own NP. Unhurried visits. Same-day messaging. Prescription management. Specialist referrals.</p>
+    </div>
+    <div class="pillar">
+      <span class="p-tag">02 / PREVENTION</span>
+      <span class="p-title">Preventive medicine <em>& longevity</em></span>
+      <p>Advanced labs, body-composition tracking, and a personalized health plan designed for the long run.</p>
+    </div>
+    <div class="pillar">
+      <span class="p-tag">03 / HORMONE HEALTH</span>
+      <span class="p-title">Hormone <em>health</em></span>
+      <p>Women's and men's hormone care for the adult conditions OHIP often can't prioritize.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NARRATIVE -->
+<section class="narr">
+  <div class="left">
+    <span class="eyebrow">Why Optimal</span>
+    <h2 class="display">Primary care the way <em>it should work</em>.</h2>
+    <p>You want a doctor who actually knows you. Who answers when you message. Who has more than 10 minutes. Who tracks your numbers over time, not just when something breaks.</p>
+    <p class="close">That's what <em>Optimal</em> is. A private family practice in Barrie — designed for people who want to age well and stay ahead of what's next.</p>
+  </div>
+  <div class="narr-img"><img src="assets/images/doctor-tablet-patient.jpg" alt="A clinician reviewing a care plan with a patient"></div>
+</section>
+
+<!-- INCLUSIONS -->
+<section class="incl">
+  <span class="eyebrow" style="text-align:center;display:block">What's included</span>
+  <h2 class="display">Everything your membership <em>covers</em>.</h2>
+  <p class="sub">Eight capabilities built around continuity, access, and the time to actually do the work.</p>
+  <div class="incl-grid">
+    <div class="inc-item"><div class="dot"><iconify-icon icon="tabler:user-heart"></iconify-icon></div>
+      <div><h3>One dedicated Nurse Practitioner</h3><p>Choose your NP when you join. See the same person every visit — no rotating providers, no starting over every time.</p></div></div>
+    <div class="inc-item"><div class="dot"><iconify-icon icon="tabler:clock-hour-4"></iconify-icon></div>
+      <div><h3>45-minute unhurried visits</h3><p>Up to six scheduled visits per year, plus acute visits as needed. We never rush the room.</p></div></div>
+    <div class="inc-item"><div class="dot"><iconify-icon icon="majesticons:chat-line"></iconify-icon></div>
+      <div><h3>Unlimited same-day messaging</h3><p>Call, text, or message your care team. Same-day response during business hours. No triage queue.</p></div></div>
+    <div class="inc-item"><div class="dot"><iconify-icon icon="tabler:scale"></iconify-icon></div>
+      <div><h3>Quarterly InBody body-composition scans</h3><p>Muscle, fat, visceral fat, phase angle — tracked every 90 days so you can see what's working.</p></div></div>
+    <div class="inc-item"><div class="dot"><iconify-icon icon="tabler:clipboard-heart"></iconify-icon></div>
+      <div><h3>Personalized health plan</h3><p>Built with you in your first visit, revisited every six months. A document that evolves with your life.</p></div></div>
+    <div class="inc-item"><div class="dot"><iconify-icon icon="tabler:prescription"></iconify-icon></div>
+      <div><h3>Prescription refills without a visit</h3><p>Message us, we renew. No "please come in just for the prescription."</p></div></div>
+    <div class="inc-item"><div class="dot"><iconify-icon icon="tabler:share-3"></iconify-icon></div>
+      <div><h3>Specialist & imaging referral coordination</h3><p>We manage the referral, track the result, and loop back with you.</p></div></div>
+    <div class="inc-item"><div class="dot"><iconify-icon icon="tabler:phone"></iconify-icon></div>
+      <div><h3>After-hours urgent health line</h3><p>Direct access to a clinician when you need it, outside business hours.</p></div></div>
+  </div>
+</section>
+
+<!-- FACILITY -->
+<section class="facility">
+  <span class="eyebrow" style="color:#87A482">The clinic</span>
+  <h2 class="display">We built the clinic <em>we'd want to go to</em>.</h2>
+  <p class="lede">Our south Barrie location opened in 2026. It's a nearly million-dollar build, designed around a single idea: primary care shouldn't feel like an assembly line.</p>
+  <div class="photo-grid">
+    <div class="cell c1"><span>Exterior · South Barrie</span></div>
+    <div class="cell c2"><span>Reception</span></div>
+    <div class="cell c3"><span>Exam room</span></div>
+    <div class="cell c4"><span>InBody room</span></div>
+    <div class="cell c5"><span>Consult room</span></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <span class="eyebrow">The team</span>
+  <h2 class="display">Meet the <em>clinicians</em> who'll care for you.</h2>
+  <p class="sub">NP-led primary care, with every member matched to one provider for the long haul.</p>
+  <div class="team-grid">
+    <div class="member">
+      <div class="portrait"><img src="assets/images/portrait-circle-1.png" alt=""></div>
+      <span class="n">Amrit Thukral, NP</span>
+      <span class="role">Clinic Director</span>
+      <p>15+ years of primary care experience with a focus on longevity and preventive medicine.</p>
+    </div>
+    <div class="member">
+      <div class="portrait"><img src="assets/images/portrait-circle-2.png" alt=""></div>
+      <span class="n">Lauren Miller, NP-PHC</span>
+      <span class="role">Nurse Practitioner</span>
+      <p>Family-focused care with specialty training in women's health and hormone medicine.</p>
+    </div>
+    <div class="member">
+      <div class="portrait initials">EL</div>
+      <span class="n">Emma Lenart, NP</span>
+      <span class="role">Nurse Practitioner</span>
+      <p>Preventive care and chronic-condition management. Runs the quarterly check-in cohorts.</p>
+    </div>
+  </div>
+  <div class="promise">Every Optimal member is <em>matched with one NP</em>. You see the same person every time. No rotating providers. No starting over each visit.</div>
+</section>
+
+<!-- VIGNETTE -->
+<section class="vignette">
+  <span class="eyebrow">Real outcomes</span>
+  <h2 class="display">What it looks like when <em>it works</em>.</h2>
+  <div class="vig-card">
+    <div class="vig-head">
+      <div class="ava"><img src="assets/images/avatar-chat-2.jpg" alt=""></div>
+      <div>
+        <div class="name">Sarah, 42</div>
+        <div class="meta">Marketing Director · Barrie member since 2024</div>
+      </div>
+    </div>
+    <div class="vig-grid">
+      <div><h4>Goal</h4><p>Sarah wanted to get ahead of her family history of heart disease — before it became a problem she was managing.</p></div>
+      <div><h4>Why she joined Optimal</h4><p>Her OHIP GP gave her 10 minutes and told her her cholesterol was "borderline." She wanted someone to actually engage with the numbers.</p></div>
+      <div><h4>What we discovered</h4><p>Her ApoB was 220 — well above the 80 threshold associated with long-term cardiovascular risk.</p></div>
+      <div><h4>The plan</h4><p>Targeted lifestyle changes with her NP, quarterly biomarker tracking, and a discussion of pharmacotherapy options.</p></div>
+      <div class="outcome"><p>90 days later, <em>Sarah's ApoB was at 92</em> — tracking toward target, with a plan she can stay on.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare" id="compare">
+  <span class="eyebrow">How we compare</span>
+  <h2 class="display">The <em>right-sized</em> option for Barrie.</h2>
+  <p class="sub">Walk-ins are for emergencies. Executive health clinics cost $3,700+ a year. Optimal is the practice most people actually need — between the two.</p>
+  <div class="compare-table">
+    <div class="h"></div>
+    <div class="h optimal">Optimal</div>
+    <div class="h">Walk-in clinic</div>
+    <div class="h">Traditional GP</div>
+    <div class="h">Executive health clinics</div>
+
+    <div>Annual health exam</div>
+    <div class="cell optimal"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="tabler:minus" data-n></iconify-icon></div>
+    <div class="cell">Varies</div>
+    <div class="cell"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+
+    <div>Your own dedicated provider</div>
+    <div class="cell optimal"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="tabler:minus" data-n></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+
+    <div>Wait times for appointments</div>
+    <div class="cell optimal"><b>Same or next day</b></div>
+    <div class="cell">Hours waiting</div>
+    <div class="cell">4-8+ weeks</div>
+    <div class="cell">Same or next day</div>
+
+    <div>Longer, more thorough visits</div>
+    <div class="cell optimal"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+    <div class="cell">5–10 min</div>
+    <div class="cell">10–15 min</div>
+    <div class="cell">15 min</div>
+
+    <div>In-person and virtual care</div>
+    <div class="cell optimal"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="tabler:minus" data-n></iconify-icon></div>
+    <div class="cell">Varies</div>
+    <div class="cell">Varies</div>
+
+    <div>Prescription refills without a visit</div>
+    <div class="cell optimal"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="tabler:minus" data-n></iconify-icon></div>
+    <div class="cell">Sometimes</div>
+    <div class="cell"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+
+    <div>Body composition scans</div>
+    <div class="cell optimal"><b>Quarterly</b></div>
+    <div class="cell"><iconify-icon icon="tabler:minus" data-n></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="tabler:minus" data-n></iconify-icon></div>
+    <div class="cell">Annual</div>
+
+    <div>Personalized health plan</div>
+    <div class="cell optimal"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="tabler:minus" data-n></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="tabler:minus" data-n></iconify-icon></div>
+    <div class="cell"><iconify-icon icon="lets-icons:check-fill" data-y></iconify-icon></div>
+
+    <div class="price-row" style="display:contents">
+      <div class="first">Annual cost</div>
+      <div class="cell optimal"><b>$1,495</b></div>
+      <div class="cell">$0 (OHIP)</div>
+      <div class="cell">$0 (OHIP)</div>
+      <div class="cell">$3,700–$10,000</div>
+    </div>
+  </div>
+
+  <div class="ideal-if">
+    <div class="l">Optimal</div>
+    <div class="r">You want a long-term relationship with a provider who has time for you.</div>
+    <div class="l">Walk-in</div>
+    <div class="r">Occasional acute issues.</div>
+    <div class="l">OHIP practice</div>
+    <div class="r">You already have one you like.</div>
+    <div class="l">Executive health</div>
+    <div class="r">You want advanced imaging and physician-led care.</div>
+  </div>
+
+  <p class="ohip-note">Optimal works alongside your OHIP coverage — core medical visits are still billed through OHIP. Your membership covers non-OHIP services: unlimited messaging, InBody scans, personalized planning, and concierge coordination.</p>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <span class="eyebrow" style="text-align:center;display:block">Membership</span>
+  <h2 class="display">One tier. <em>No surprises.</em></h2>
+  <p class="sub">Couple and household pricing available on request.</p>
+  <div class="price-card">
+    <div class="n"><em>Optimal</em> Membership</div>
+    <div class="price-amt">$140<small>/month</small></div>
+    <div class="price-alt">or $1,680 billed annually <em>(save 2 months)</em></div>
+    <p class="price-desc">One provider. Unhurried visits. Quarterly body composition. Longevity-minded care.</p>
+    <div class="guarantees">
+      <div class="guar"><iconify-icon icon="lets-icons:check-fill"></iconify-icon><span><b>90-day money-back guarantee</b>Full refund, no conditions.</span></div>
+      <div class="guar"><iconify-icon icon="lets-icons:check-fill"></iconify-icon><span><b>3-day booking guarantee</b>See your NP in 3 business days or your next month is free.</span></div>
+      <div class="guar"><iconify-icon icon="lets-icons:check-fill"></iconify-icon><span><b>Cancel anytime</b>No long-term contract.</span></div>
+    </div>
+    <a href="#offer" class="btn-big" style="font-size:18px">Book your free Optimal Starter <iconify-icon icon="tabler:arrow-right"></iconify-icon></a>
+  </div>
+</section>
+
+<!-- IS THIS FOR ME -->
+<section class="isfor">
+  <h2 class="display">Is <em>Optimal</em> for me?</h2>
+  <div class="isfor-grid">
+    <div class="isfor-col pos">
+      <h3>Optimal is probably <em>for you</em> if…</h3>
+      <ul>
+        <li><iconify-icon icon="lets-icons:check-fill"></iconify-icon>You've been looking for a family doctor for months or years and keep hitting dead ends.</li>
+        <li><iconify-icon icon="lets-icons:check-fill"></iconify-icon>You want more than 10 minutes with your provider.</li>
+        <li><iconify-icon icon="lets-icons:check-fill"></iconify-icon>You care about where your body is going in the next 20 years, not just this week.</li>
+        <li><iconify-icon icon="lets-icons:check-fill"></iconify-icon>You're navigating hormone changes and don't want to be dismissed.</li>
+        <li><iconify-icon icon="lets-icons:check-fill"></iconify-icon>You'd rather pay for primary care that works than hope the system gets better.</li>
+      </ul>
+    </div>
+    <div class="isfor-col neg">
+      <h3>Optimal probably <em>isn't for you</em> if…</h3>
+      <ul>
+        <li><iconify-icon icon="tabler:minus"></iconify-icon>You're looking for a walk-in clinic (we're membership-based).</li>
+        <li><iconify-icon icon="tabler:minus"></iconify-icon>You need paediatric care (we see adults 18+).</li>
+        <li><iconify-icon icon="tabler:minus"></iconify-icon>You want full executive-health imaging like whole-body MRI (we refer out).</li>
+        <li><iconify-icon icon="tabler:minus"></iconify-icon>You're happy with your current family doctor — stay with them!</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <span class="eyebrow">Frequently asked</span>
+  <h2 class="display">Frequently asked <em>questions</em></h2>
+  <div class="faq-list">
+    <div class="faq-row open">
+      <div class="q"><span>Does this replace my family doctor?</span><iconify-icon icon="tabler:chevron-up"></iconify-icon></div>
+      <div class="a">Yes — you can transfer to us if you'd like, and we'll request records from your previous provider.</div>
+    </div>
+    <div class="faq-row">
+      <div class="q"><span>Is OHIP still billed for medical visits?</span><iconify-icon icon="tabler:chevron-down"></iconify-icon></div>
+      <div class="a">Core medical visits are still billed through OHIP. Membership covers non-OHIP services like unlimited messaging, InBody scans, the personalized health plan, and concierge coordination.</div>
+    </div>
+    <div class="faq-row">
+      <div class="q"><span>Can I add my spouse or family member?</span><iconify-icon icon="tabler:chevron-down"></iconify-icon></div>
+      <div class="a">Yes — household pricing available. Ask us about the rate during your Starter visit.</div>
+    </div>
+    <div class="faq-row">
+      <div class="q"><span>Can I cancel anytime?</span><iconify-icon icon="tabler:chevron-down"></iconify-icon></div>
+      <div class="a">Yes. No long-term contract, plus our 90-day money-back guarantee.</div>
+    </div>
+    <div class="faq-row">
+      <div class="q"><span>How soon can I be seen after joining?</span><iconify-icon icon="tabler:chevron-down"></iconify-icon></div>
+      <div class="a">Our 3-day booking guarantee means you'll see your NP within 3 business days of joining — or your next month is free.</div>
+    </div>
+    <div class="faq-row">
+      <div class="q"><span>Do you see kids?</span><iconify-icon icon="tabler:chevron-down"></iconify-icon></div>
+      <div class="a">Optimal is an adults-only practice. We focus on primary care, preventive medicine, and hormone health for patients 18 and older.</div>
+    </div>
+    <div class="faq-row">
+      <div class="q"><span>What if I need imaging or a specialist?</span><iconify-icon icon="tabler:chevron-down"></iconify-icon></div>
+      <div class="a">We coordinate the referral and track the result. Your NP stays looped in.</div>
+    </div>
+    <div class="faq-row">
+      <div class="q"><span>How is Optimal different from Maple?</span><iconify-icon icon="tabler:chevron-down"></iconify-icon></div>
+      <div class="a">Maple is virtual and transactional. We're your in-person primary care provider who knows you over years.</div>
+    </div>
+    <div class="faq-row">
+      <div class="q"><span>How is Optimal different from Medcan or Cleveland Clinic?</span><iconify-icon icon="tabler:chevron-down"></iconify-icon></div>
+      <div class="a">A fraction of the price, built for Barrie, longevity-focused from day one. We're NP-led; they're physician-led — the care models are different, and the pricing reflects that.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <h2>Book your free Optimal <em>Starter</em>.</h2>
+  <p>30 minutes. Coffee. Tour of our new Barrie location. Free InBody scan. 15 minutes with your prospective NP. Walk away with your body composition report — join or don't. No pressure, no sales pitch.</p>
+  <a href="#" class="btn-green">Claim your Starter <iconify-icon icon="tabler:arrow-right"></iconify-icon></a>
+  <div class="text-us">Not ready yet? Text us at <a href="sms:+14373700291">(437) 370-0291</a>.</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="logo"><img src="assets/logos/OptimalLogo-Opposite.png" alt="Optimal"></div>
+    <div class="tagline">A longevity-focused family practice in Barrie — primary care, preventive medicine, and hormone health for adults 18+.</div>
+    <a class="legitscript" href="#"><iconify-icon icon="tabler:shield-check"></iconify-icon>LegitScript certified — verify</a>
+  </div>
+  <div>
+    <h4>Company</h4>
+    <ul>
+      <li><a href="#pillars">What we do</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#compare">Compare</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <ul>
+      <li>225 Mapleview Dr E, Unit 3<br>Barrie, ON L4N 0W5</li>
+      <li><a href="tel:+14373700291">(437) 370-0291</a></li>
+      <li>Text us: <a href="sms:+14373700291">(437) 370-0291</a></li>
+      <li><a href="mailto:care@beoptimal.ca">care@beoptimal.ca</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Hours</h4>
+    <ul>
+      <li>Mon – Fri · 8am – 6pm</li>
+      <li>Sat · 9am – 1pm</li>
+      <li>Sun · Closed</li>
+      <li style="opacity:.7;font-style:italic">After-hours urgent line for members</li>
+    </ul>
+  </div>
+  <div class="legal">
+    <span>© Optimal 2026 · Optimal Health Holdings Inc.</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span>
+  </div>
+</footer>
+
+</div>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-m"><a href="#offer">Claim your free Starter →</a></div>
+
+<script>
+  document.querySelectorAll('.faq-row').forEach(r => {
+    r.addEventListener('click', () => {
+      const open = r.classList.contains('open');
+      r.classList.toggle('open');
+      const ic = r.querySelector('iconify-icon');
+      ic.setAttribute('icon', open ? 'tabler:chevron-down' : 'tabler:chevron-up');
+    });
+  });
+</script>
+</body></html>
