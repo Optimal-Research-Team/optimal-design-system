@@ -9,6 +9,23 @@ The two surfaces share brand DNA — the same **dark forest green** (`#2C4E25`),
 
 ---
 
+## What's new in v1.2 (Oct 12, 2026)
+
+The illustration, motion and social layer, built for the @beoptimal.ca Instagram relaunch.
+
+- **Engraved plates.** `assets/illustration/plates/`: sage steel-plate engravings of organs (blood, heart, thyroid, liver, kidney, pancreas, ovary, testis, lymph, bladder, electrolytes, nutrients) and a lakeshore. Each comes in green ink for cream grounds and `-cream` ink for forest grounds. They first appeared on the longevity results page.
+- **Engravings.** `assets/illustration/engravings/`: the IV iron set (iron tablets, gut wall, stomach, IV bag, vein with red cells, liver, test tubes, figures of women), plus ApoB particles and arterial plaque. Same ink and both variants.
+- **Isometric figures.** `assets/illustration/figures/`: still frames of the 15 interactive anatomy figures from [optimal-anatomy-figures](https://optimal-research-team.github.io/optimal-anatomy-figures/), as transparent images. Embed the live versions from that repo, and never recolour them.
+- **Social layer.** `social.css`: 1080px frames (post 1080×1350, story/reel 1080×1920), safe areas, forest hairline hatching, ring accents, capsules over photos, hatched stat numerals, the keyword pill and the photo grade.
+- **Grain.** `assets/textures/grain-1024.png`. Social and photo exports take a mild monochrome film grain, about 8/255 on photos and 6/255 on flat grounds, applied at export and never to UI. This is a deliberate change (Peter, Oct 12) to the original "no grain" rule, and it covers social only.
+- Previews: `preview/illustration.html` and `preview/social.html`.
+
+**Rules for the layer**
+- Use one illustration per frame. Engravings go on cream, or in their cream ink on forest.
+- Forest grounds are reserved for cream-ink engravings. Every other social frame sits on cream or sage.
+- Text over photos sits in a capsule (`rgba(28,49,24,.9)`), never on a dark gradient.
+- Social copy follows the menopause and ad guardrails: no drug brand names, no outcome timelines, no testimonials, and comparisons only where they're factual.
+
 ## What's new in v1.1 (Oct 2026)
 
 - **The animated logo, "Into Range".** `assets/logos/optimal-logo.js` is the `<optimal-logo>` web component: live SVG, 12 KB gzipped, no dependencies. Video renders are in `assets/motion/`. Preview: `preview/brand-logo-animated.html`. Source repo: [optimal-logo-animation](https://github.com/Optimal-Research-Team/optimal-logo-animation).
@@ -28,7 +45,7 @@ These override the Figma-era values in "Company / product context" and the UI ki
 | Hours | Mon 9–5 · Tue 8:30–8 · Wed 10–6 · Thu 9–8 · Fri 9–4 |
 | Membership | Longevity Membership Core: annual and HSA eligible. Prices change, so take them from beoptimal.ca/membership. Never reuse the Figma's 2024 prices ($80/month, $839/year). |
 | Live services | Menopause & Perimenopause Care, VO₂ Max Testing, Creator 600 running gait analysis, InBody 580, Hyperbaric Oxygen Therapy (at a partner facility; always use the site's investigational wording), and the free Optimal Longevity Protocol and Optimal Menopause Protocol guides |
-| Not launched | Men's Hormone Optimization Protocol and a standalone Longevity Assessment. Don't advertise either until they are live. |
+| Not launched | Men's Hormone Optimization Protocol and a standalone Longevity Assessment. Don't advertise either until they are live. IV iron is pre-launch: advertise only the founding waitlist (no referral required, founding rate set at launch). |
 | Care team | Led by Nurse Practitioners, with a physician medical advisor |
 
 Headlines from the live site that follow the italic-noun rule: *"A **new** kind of health clinic is here."*, "Seen this week. Not this month.", *"This is **Optimal**."*, "Measured, not estimated.", *"Start with a **conversation**, not a treadmill."*
@@ -46,15 +63,15 @@ You can also run `git clone --depth 1 <url> .claude/skills/optimal-design-system
 **From a CDN.** jsDelivr serves the public repo. Pin a tag:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.1.0/colors_and_type.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.1.0/forest-night.css">
-<script src="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.1.0/assets/logos/optimal-logo.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.2.0/colors_and_type.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.2.0/forest-night.css">
+<script src="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.2.0/assets/logos/optimal-logo.js" defer></script>
 ```
 
 **From npm.** This installs straight from GitHub:
 
 ```bash
-npm i github:Optimal-Research-Team/optimal-design-system#v1.1.0
+npm i github:Optimal-Research-Team/optimal-design-system#v1.2.0
 ```
 
 ```js
@@ -272,6 +289,9 @@ These are served from `https://api.iconify.design/` via the `<iconify-icon>` web
 | `SKILL.md` | Agent-compatible entrypoint. |
 | `colors_and_type.css` | All design tokens: colour, type, radii, shadows, spacing, semantic styles. |
 | `forest-night.css` | Forest night dark theme (v1.1). Remaps the semantic tokens. |
+| `social.css` | Social layer (v1.2): 1080px frames, hatching, ring accents, capsules, stat numerals, keyword pill. |
+| `assets/illustration/` | Engraved plates, engravings and isometric figure stills (v1.2), WebP with transparency. |
+| `assets/textures/grain-1024.png` | Tileable film grain for social exports (v1.2). |
 | `assets/logos/optimal-logo.js` | `<optimal-logo>` animated logo web component (v1.1). |
 | `assets/motion/` | "Into Range" logo renders, cream and forest green, 16:9 / 9:16 / 1:1 (v1.1). |
 | `index.html` | Gallery of every preview card and UI kit, served on GitHub Pages. |

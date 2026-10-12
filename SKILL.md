@@ -1,6 +1,6 @@
 ---
 name: optimal-design-system
-description: Optimal Health (Barrie, ON) brand design system. Covers colours, typography, voice, components, logos, the Forest night dark theme and the animated "Into Range" logo. Use for any page, deck, email, ad, social post, TV screen or app screen that represents Optimal.
+description: Optimal Health (Barrie, ON) brand design system. Covers colours, typography, voice, components, logos, the Forest night dark theme, the animated "Into Range" logo, and the engraved-plate illustration and social layer. Use for any page, deck, email, ad, social post, TV screen or app screen that represents Optimal.
 ---
 
 # Optimal Health Design System — SKILL.md
@@ -32,6 +32,7 @@ The Figma is from 2024. Before writing any copy, read "Current clinic facts" in 
 4. Reference `preview/` for single-purpose specimens of colour swatches, type scale, spacing, components, logo variants, and iconography.
 5. **Dark surfaces** (TVs, explainers, dark dashboards): add `forest-night.css` after the tokens and put `class="forest-night"` on the root. Don't invent a new dark palette.
 6. **The animated logo**: load `assets/logos/optimal-logo.js`, then use `<optimal-logo variant="stage|inline" theme="light|dark" play="visible|load|manual">`. Use it for ambient screens, reel outros, footers and booking confirmations, never a hero. Video renders are in `assets/motion/`. Preview: `preview/brand-logo-animated.html`.
+7. **Illustration and social (v1.2)**: for posts, stories, ads and explainers, use `assets/illustration/` (engraved plates, engravings, isometric figure stills) and `social.css`. Engravings go in green ink on cream, or cream ink on forest. Forest grounds are only for cream-ink engravings. Use one illustration per frame, add mild grain at export (`assets/textures/grain-1024.png`), and put text over photos in capsules. Previews: `preview/illustration.html`, `preview/social.html`.
 
 ## Two surfaces, one system
 | | Website (marketing) | Weight-loss app (member) |
