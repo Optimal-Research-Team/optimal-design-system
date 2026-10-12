@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>Animated logo · Into Range</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="../assets/logos/optimal-logo.js" defer></script>
+<style>
+ html,body{margin:0;padding:0;width:700px;background:#FFFCF7;font-family:'Public Sans',sans-serif}
+ .wrap{padding:24px;display:flex;flex-direction:column;gap:18px}
+ .lab{font-size:11px;color:#76736D;letter-spacing:0;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+ .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+ .logo-card{border:1px solid #DDDCDB;border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:10px;background:#FFFCF7}
+ .logo-card.dark{background:#2C4E25;border-color:#2C4E25}
+ .logo-card .body{display:flex;align-items:center;justify-content:center;min-height:70px}
+ .logo-card .body optimal-logo{width:100%}
+ .logo-card .body optimal-logo[variant="inline"]{width:72%}
+ .logo-card .meta{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;font-size:12px;color:#76736D;letter-spacing:-0.02em}
+ .logo-card.dark .meta{color:rgba(255,252,247,.7)}
+ .logo-card .meta b{display:block;color:#252525;font-weight:500;font-size:13px;margin-bottom:2px}
+ .logo-card.dark .meta b{color:#FFFCF7}
+ .replay{appearance:none;border:1px solid #2C4E25;background:#FFFCF7;color:#2C4E25;font:500 12px/1 'Public Sans',sans-serif;letter-spacing:-0.02em;padding:7px 12px;border-radius:48px;cursor:pointer;flex:none}
+ .dark .replay{border-color:rgba(255,252,247,.5);background:transparent;color:#FFFCF7}
+ .note{font-size:12px;color:#76736D;letter-spacing:-0.02em;line-height:1.5;border:1px dashed #76736D;border-radius:6px;padding:14px 16px}
+ .note b{color:#252525;font-weight:500}
+ code{font:12px/1.4 ui-monospace,Menlo,monospace;color:#2C4E25}
+ ul{margin:6px 0 0;padding-left:18px}
+</style></head><body><div class="wrap">
+
+<div>
+  <div class="lab">Animated logo · "Into Range"</div>
+  <div class="grid">
+    <div class="logo-card dark"><div class="body"><optimal-logo variant="stage" theme="dark" play="load"></optimal-logo></div><div class="meta"><span><b>stage · dark</b>Video choreography, forms at centre</span><button class="replay" type="button">Replay</button></div></div>
+    <div class="logo-card"><div class="body"><optimal-logo variant="stage" theme="light" play="load"></optimal-logo></div><div class="meta"><span><b>stage · light</b>On cream</span><button class="replay" type="button">Replay</button></div></div>
+    <div class="logo-card"><div class="body"><optimal-logo variant="inline" theme="light" play="load"></optimal-logo></div><div class="meta"><span><b>inline · light</b>Forms in place, for a header or footer</span><button class="replay" type="button">Replay</button></div></div>
+    <div class="logo-card dark"><div class="body"><optimal-logo variant="inline" theme="dark" play="load"></optimal-logo></div><div class="meta"><span><b>inline · dark</b>For forest surfaces</span><button class="replay" type="button">Replay</button></div></div>
+  </div>
+</div>
+
+<div class="note">
+  <b>What it means.</b> Seven grey markers glide into a hairline target ring and turn green as they arrive, then the wordmark wipes in. They come "into range", which is the clinic's promise. The geometry is measured from <code>OptimalLogo-Green.png</code> and the wordmark is the site's own vector.
+  <ul>
+    <li><b>Use it</b> on TV and screen ambient loops, reel outros, a site footer, and booking confirmations. Don't use it in a hero; the static logo belongs there.</li>
+    <li><b>Web:</b> <code>&lt;optimal-logo variant="stage|inline" theme="light|dark" play="visible|load|manual"&gt;</code>. Methods are <code>play()</code>, <code>seek(s)</code> and <code>finish()</code>. Under <code>prefers-reduced-motion</code> it always shows the finished logo.</li>
+    <li><b>Video:</b> renders are in <code>assets/motion/</code>: cream and forest-green backgrounds at 16:9, 9:16 and 1:1.</li>
+  </ul>
+</div>
+
+</div>
+<script>
+document.querySelectorAll('.replay').forEach(b => b.addEventListener('click', () => {
+  const l = b.closest('.logo-card').querySelector('optimal-logo');
+  if (l && l.play) l.play();
+}));
+</script>
+</body></html>

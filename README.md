@@ -9,6 +9,64 @@ The two surfaces share brand DNA — the same **dark forest green** (`#2C4E25`),
 
 ---
 
+## What's new in v1.1 (Oct 2026)
+
+- **The animated logo, "Into Range".** `assets/logos/optimal-logo.js` is the `<optimal-logo>` web component: live SVG, 12 KB gzipped, no dependencies. Video renders are in `assets/motion/`. Preview: `preview/brand-logo-animated.html`. Source repo: [optimal-logo-animation](https://github.com/Optimal-Research-Team/optimal-logo-animation).
+- **Forest night, a dark theme.** `forest-night.css` holds the dark scheme already used on the clinic TVs, the hormone explainers and the anatomy figures. Load it after `colors_and_type.css` and add `class="forest-night"`.
+- **Current clinic facts** (below). The April 2026 Figma predates the clinic's move and current pricing.
+- **Ready for other projects** as a Claude Code skill, a CDN link or an npm dependency (below).
+
+### Current clinic facts (Oct 2026)
+
+These override the Figma-era values in "Company / product context" and the UI kits.
+
+| | |
+| --- | --- |
+| Address | 630 Huronia Rd, Unit 5, Barrie, ON L4N 0W5. The Mapleview Dr E address in the UI kits is out of date. |
+| Contact | care@beoptimal.ca · (437) 370-0291 · Instagram @beoptimal.ca |
+| Booking | `https://book.beoptimal.ca`, optionally with `?service=hormone`, `hbot`, `vo2max`, `creator600` or `inbody` |
+| Hours | Mon 9–5 · Tue 8:30–8 · Wed 10–6 · Thu 9–8 · Fri 9–4 |
+| Membership | Longevity Membership Core: annual and HSA eligible. Prices change, so take them from beoptimal.ca/membership. Never reuse the Figma's 2024 prices ($80/month, $839/year). |
+| Live services | Menopause & Perimenopause Care, VO₂ Max Testing, Creator 600 running gait analysis, InBody 580, Hyperbaric Oxygen Therapy (at a partner facility; always use the site's investigational wording), and the free Optimal Longevity Protocol and Optimal Menopause Protocol guides |
+| Not launched | Men's Hormone Optimization Protocol and a standalone Longevity Assessment. Don't advertise either until they are live. |
+| Care team | Led by Nurse Practitioners, with a physician medical advisor |
+
+Headlines from the live site that follow the italic-noun rule: *"A **new** kind of health clinic is here."*, "Seen this week. Not this month.", *"This is **Optimal**."*, "Measured, not estimated.", *"Start with a **conversation**, not a treadmill."*
+
+### Using this in other projects
+
+**As a Claude Code skill.** This is the recommended route for cloud sessions. Put the repo at `.claude/skills/optimal-design-system/` inside the project:
+
+```bash
+git submodule add https://github.com/Optimal-Research-Team/optimal-design-system .claude/skills/optimal-design-system
+```
+
+You can also run `git clone --depth 1 <url> .claude/skills/optimal-design-system` for a one-off copy. `SKILL.md` has skill frontmatter, so Claude Code loads it as the `optimal-design-system` skill, and every path it mentions resolves inside that folder.
+
+**From a CDN.** jsDelivr serves the public repo. Pin a tag:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.1.0/colors_and_type.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.1.0/forest-night.css">
+<script src="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.1.0/assets/logos/optimal-logo.js" defer></script>
+```
+
+**From npm.** This installs straight from GitHub:
+
+```bash
+npm i github:Optimal-Research-Team/optimal-design-system#v1.1.0
+```
+
+```js
+import 'optimal-design-system/tokens.css';        // = colors_and_type.css
+import 'optimal-design-system/forest-night.css';  // optional dark theme
+import 'optimal-design-system/optimal-logo.js';   // registers <optimal-logo>
+```
+
+**Browse it:** https://optimal-research-team.github.io/optimal-design-system/
+
+---
+
 ## Sources
 
 Everything in this system was lifted from a single Figma file the user attached as a virtual filesystem:
@@ -33,6 +91,8 @@ The `.fig` pseudocode is the source of truth for values (layout, colour, type, s
 
 > "A new kind of family health clinic is here. A private clinic built for personalized and preventative health. Fees are HSA eligible."
 
+> Figma-era context (2024). For the current address, services and pricing see "Current clinic facts" above.
+
 Optimal is a members-only primary care clinic led by **Nurse Practitioners** (NPs) rather than family physicians. The business is Barrie, ON-based (`Optimal Health Holdings Inc., 225 Mapleview Drive East, Unit 3, Barrie, ON, L4N 0W5`), contact `care@beoptimal.ca`, `(437)-370-0291`.
 
 Positioning:
@@ -43,7 +103,7 @@ Positioning:
 - Diagnostics, lab tests, imaging orders.
 - A "suite of longevity, wellness, and nutrition services (coming soon)" — the weight-loss app is part of that suite.
 
-Membership pricing (from the Figma, 2024):
+Membership pricing (from the Figma, 2024; **historical, do not reuse**):
 - **Monthly Plan** — $80 / month, 3-month minimum, "Grand opening" badge.
 - **Annual Plan** — $839 / year, "Save $120 annually".
 - Both plans are **HSA-eligible**.
@@ -110,7 +170,7 @@ No mono. No custom font beyond those four. Helvetica Neue appears only in the iO
 
 **No illustration.** The brand does not use custom illustrations (except the single nurse vector on `/Icons/Frame-1`, which is a filler, not a system asset). It uses **real photography** — clinical portraits, natural imagery, candid members. Imagery vibe is **warm, softly desaturated, natural light**, often slightly green-biased. Never cool, never clinical-sterile stock, never black & white, no grain filter.
 
-**Animation.** The Figma doesn't specify motion. Defaults for this system are conservative: **simple fades and 150–300ms transitions on the standard ease curve** (`cubic-bezier(.2,.7,.2,1)`). No bouncing, no spring, no parallax. Carousel advance is a slide + crossfade.
+**Animation.** The Figma doesn't specify motion. The one signature motion piece is the animated logo (see "What's new in v1.1"). Defaults for this system are conservative: **simple fades and 150–300ms transitions on the standard ease curve** (`cubic-bezier(.2,.7,.2,1)`). No bouncing, no spring, no parallax. Carousel advance is a slide + crossfade.
 
 **Hover states.** None explicitly defined. Recommended:
 - Buttons: darken background 6% (for light-on-green) or shift background to forest-700 at 92% (for white-on-dark).
@@ -211,7 +271,12 @@ These are served from `https://api.iconify.design/` via the `<iconify-icon>` web
 | `README.md` | You are here. |
 | `SKILL.md` | Agent-compatible entrypoint. |
 | `colors_and_type.css` | All design tokens: colour, type, radii, shadows, spacing, semantic styles. |
-| `assets/logos/` | Wordmark + symbol exports. |
+| `forest-night.css` | Forest night dark theme (v1.1). Remaps the semantic tokens. |
+| `assets/logos/optimal-logo.js` | `<optimal-logo>` animated logo web component (v1.1). |
+| `assets/motion/` | "Into Range" logo renders, cream and forest green, 16:9 / 9:16 / 1:1 (v1.1). |
+| `index.html` | Gallery of every preview card and UI kit, served on GitHub Pages. |
+| `package.json` | Lets projects install the system from GitHub with npm. |
+| `assets/logos/` | Wordmark + symbol exports, plus the animated logo component. |
 | `assets/images/` | Photographic assets lifted from the Figma. |
 | `fonts/` | Empty — system currently imports Google Fonts. See CAVEATS. |
 | `preview/` | Small HTML cards surfaced on the Design System tab — colour swatches, type specimens, spacing, components. |
@@ -221,5 +286,5 @@ These are served from `https://api.iconify.design/` via the `<iconify-icon>` web
 ### Caveats
 - **Fonts are loaded from Google Fonts**, not shipped as TTFs in `fonts/`. All four families (Castoro, Public Sans, Hanken Grotesk, Inter) are free and available there, so this is usually fine — but if you need offline usage please drop TTFs into `fonts/` and adjust the `@font-face` in `colors_and_type.css`.
 - **Hover / press / focus states** are not in the Figma. The values in this system are defensible defaults, not designer-signed-off.
-- **No dark mode.** Neither product has a dark scheme in the Figma.
+- **Dark mode** isn't in the Figma. `forest-night.css` (v1.1) is the dark scheme already in use on Optimal's TVs, explainers and anatomy figures.
 - **No illustrated iconography.** The nurse SVG on `/Icons/Frame-1` is a filler, not a system asset.

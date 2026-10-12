@@ -1,0 +1,33 @@
+{
+  "name": "optimal-design-system",
+  "version": "1.1.0",
+  "description": "Optimal Health (Barrie, ON) design system: tokens, type, voice, components, logos, the Forest night dark theme and the animated \"Into Range\" logo.",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Optimal-Research-Team/optimal-design-system.git"
+  },
+  "homepage": "https://optimal-research-team.github.io/optimal-design-system/",
+  "files": [
+    "README.md",
+    "SKILL.md",
+    "colors_and_type.css",
+    "forest-night.css",
+    "assets/",
+    "preview/",
+    "ui_kits/"
+  ],
+  "exports": {
+    "./tokens.css": "./colors_and_type.css",
+    "./colors_and_type.css": "./colors_and_type.css",
+    "./forest-night.css": "./forest-night.css",
+    "./optimal-logo.js": "./assets/logos/optimal-logo.js",
+    "./assets/*": "./assets/*",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "*.css",
+    "./assets/logos/optimal-logo.js"
+  ]
+}

@@ -1,3 +1,8 @@
+---
+name: optimal-design-system
+description: Optimal Health (Barrie, ON) brand design system. Covers colours, typography, voice, components, logos, the Forest night dark theme and the animated "Into Range" logo. Use for any page, deck, email, ad, social post, TV screen or app screen that represents Optimal.
+---
+
 # Optimal Health Design System — SKILL.md
 
 Agent entrypoint for the **Optimal Health** brand. Optimal is a members-only, Nurse Practitioner-led family health clinic in Barrie, Ontario, plus a companion **weight-loss app** used by members.
@@ -6,6 +11,12 @@ Agent entrypoint for the **Optimal Health** brand. Optimal is a members-only, Nu
 - Any artifact (web page, email, deck, brochure, app screen, prototype) that represents Optimal externally.
 - Any work that touches the marketing site or the weight-loss app.
 - When you need brand colours, typography, voice, or reusable components.
+
+## Current facts first (Oct 2026)
+The Figma is from 2024. Before writing any copy, read "Current clinic facts" in `README.md`:
+- The address is 630 Huronia Rd, Unit 5, not Mapleview.
+- Prices come from beoptimal.ca/membership, never the Figma's $80/$839.
+- Don't advertise anything still marked coming soon.
 
 ## Get oriented in this order
 1. Read `README.md` — the single source of truth for company context, content fundamentals, visual foundations, and iconography. Don't skip the "Content fundamentals" and "Visual foundations" sections; the brand has specific tics (italic-noun emphasis, ring accents, pills-not-rectangles) that are easy to miss.
@@ -19,6 +30,8 @@ Agent entrypoint for the **Optimal Health** brand. Optimal is a members-only, Nu
    - `ui_kits/weight-loss-app/index.html` — Home, Lessons, Chat, Progress screens in a pan/zoom design-canvas layout.
    Copy working markup from these kits rather than rebuilding from scratch.
 4. Reference `preview/` for single-purpose specimens of colour swatches, type scale, spacing, components, logo variants, and iconography.
+5. **Dark surfaces** (TVs, explainers, dark dashboards): add `forest-night.css` after the tokens and put `class="forest-night"` on the root. Don't invent a new dark palette.
+6. **The animated logo**: load `assets/logos/optimal-logo.js`, then use `<optimal-logo variant="stage|inline" theme="light|dark" play="visible|load|manual">`. Use it for ambient screens, reel outros, footers and booking confirmations, never a hero. Video renders are in `assets/motion/`. Preview: `preview/brand-logo-animated.html`.
 
 ## Two surfaces, one system
 | | Website (marketing) | Weight-loss app (member) |
@@ -45,13 +58,13 @@ Share: greens, cream, Castoro italic for display titles, hairline borders, sage-
 Warm, calm, clinical but human. Reassuring without being saccharine. Collective first-person for the clinic ("our clinicians"), second-person for the reader ("your NP"). Em-dashes, curly quotes. Product names are capitalised ("Annual Longevity Assessment", "Monthly Plan"); everything else is sentence case. Never marketing-y, never breezy.
 
 ## Copy the user can reuse verbatim
-- Hero: "A new kind of family health clinic is here."
+- Hero (live site, 2026): "A *new* kind of health clinic is here." (The 2024 Figma said "family health clinic".)
 - Hero sub: "A private clinic built for personalized and preventative health. Fees are HSA eligible."
 - CTA: "Become a member" / "Join now" / "Learn more"
 - Banner: "Now accepting patients in Barrie →"
 - Closing: "Start your journey to lifelong *wellness*."
 - Testimonial byline format: `-  KATIE, 56`
-- Copyright: `© Optimal 2024`
+- Copyright: `© Optimal <current year>`
 
 ## Iconify references (use by name)
 App: `cuida:notification-bell-outline`, `mdi:water-outline`, `tabler:meat`, `icon-park-outline:dumbbell`, `iconoir:yoga`, `mdi:fire`, `fe:calendar`, `majesticons:chat-line`, `tabler:send`, `uil:paperclip`, `mingcute:search-line`, `lets-icons:check-fill`, `gg:profile`, `octicon:goal-16`.
@@ -60,5 +73,5 @@ Website: `tabler:chevron-up`, `tabler:chevron-down`, `tabler:arrow-right`, `lets
 ## Caveats before delivering
 - Fonts load from Google Fonts (not bundled). If the user needs offline, add TTFs to `fonts/` and extend the `@font-face` rules.
 - Hover/focus/press states aren't in the Figma. The defaults in this system are reasonable but not designer-signed.
-- No dark mode exists.
+- Dark mode isn't in the Figma. Use `forest-night.css` (v1.1), which is already in use on the clinic's screens.
 - The Figma is the source of truth if any value here disagrees with a newer revision.

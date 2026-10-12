@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Optimal Health — "Forest night" dark theme
+   Not in the April 2026 Figma. This is the dark scheme already in use on the
+   exam-room and reception TVs, the hormone explainers and the anatomy figures
+   (source: optimal-anatomy-figures/shared/optimal-theme.css).
+
+   Load AFTER colors_and_type.css, then opt in on any element:
+     <html class="oh forest-night">   or   <section data-theme="forest-night">
+   It only redefines the semantic tokens, so every .oh style follows.
+   ========================================================================== */
+
+.forest-night,
+[data-theme="forest-night"] {
+  /* Night greens: base palette */
+  --night-950: #0B1608;   /* deepest: TV backdrop, full-bleed video letterbox */
+  --night-900: #152511;   /* page */
+  --night-800: #1C3118;   /* cards, raised surfaces (= --forest-grad-end) */
+  --night-700: #253821;   /* raised 2, hero overlay end */
+  --night-600: #34492F;   /* hover / lit surface */
+  --night-line: #2B3F27;  /* hairlines on night */
+
+  /* Accents that read on night */
+  --leaf-300: #A9D49C;     /* italic emphasis, links, focus */
+  --leaf-200: #CEE0C4;     /* finished logo dots on dark */
+  --forest-light: #519044; /* site --new-accent-light */
+  --heat-300: #FF9776;     /* site --accent: heat, warnings, one stat at most */
+
+  /* Semantic remap */
+  --bg:           var(--night-900);
+  --bg-alt:       var(--night-800);
+  --bg-inverse:   var(--cream-50);
+  --fg:           #C9CDBF;
+  --fg-strong:    #FFFCF7;
+  --fg-muted:     #8E9884;
+  --fg-brand:     #FFFCF7;
+  --fg-accent:    var(--leaf-300);
+  --fg-on-brand:  var(--night-900);
+  --border:       rgba(255, 252, 247, 0.16);
+  --border-quiet: var(--night-line);
+  --border-hair:  rgba(255, 252, 247, 0.10);
+  --link:         var(--leaf-300);
+  --forest-ring-50: rgba(169, 212, 156, 0.5);
+
+  color-scheme: dark;
+}
+
+/* On night, the italic-noun emphasis takes the leaf accent. */
+.forest-night em, [data-theme="forest-night"] em,
+.forest-night i,  [data-theme="forest-night"] i { color: var(--leaf-300); }

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Optimal Health Design System</title>
+<link rel="icon" href="assets/logos/Optimal_Favicon_Transparent.png">
+<link rel="stylesheet" href="colors_and_type.css">
+<script src="assets/logos/optimal-logo.js" defer></script>
+<style>
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-sans);letter-spacing:-0.02em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+  header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--grey-300)}
+  header.top img{height:28px;display:block}
+  header.top span{font-size:14px;color:var(--fg-muted)}
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(40px,7vw,88px) 0}
+  .hero h1{font:400 clamp(44px,6.4vw,84px)/1 var(--font-display);letter-spacing:-0.04em;color:var(--fg-strong);margin:0}
+  .hero h1 em{color:var(--forest-700)}
+  .hero p{font-size:18px;line-height:1.45;margin:22px 0 0;max-width:46ch}
+  .stage{background:var(--forest-700);border-radius:8px;padding:8px;box-shadow:var(--shadow-card)}
+  .stage optimal-logo{width:100%}
+  .stage-row{display:flex;justify-content:space-between;align-items:center;padding:10px 10px 4px;color:rgba(255,252,247,.75);font-size:13px}
+  .pill{appearance:none;border:1px solid rgba(255,252,247,.5);background:transparent;color:#FFFCF7;font:500 13px/1 var(--font-sans);letter-spacing:-0.02em;padding:8px 14px;border-radius:var(--radius-pill);cursor:pointer}
+  section{padding:clamp(36px,5vw,56px) 0;border-top:1px solid var(--grey-300)}
+  section h2{font:400 clamp(30px,3.6vw,44px)/1 var(--font-display);letter-spacing:-0.04em;color:var(--fg-strong);margin:0 0 8px}
+  section h2 em{color:var(--forest-700)}
+  section > .wrap > p{margin:0 0 24px;color:var(--fg-muted);max-width:60ch}
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  a.card{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border:1px solid var(--forest-700);border-radius:var(--radius-card);color:inherit;text-decoration:none;background:var(--white);transition:box-shadow var(--dur-slow) var(--ease-standard)}
+  a.card:hover{box-shadow:var(--shadow-card)}
+  a.card b{font:400 24px/1.05 var(--font-display);letter-spacing:-0.04em;color:var(--forest-700)}
+  a.card span{font-size:14px;line-height:1.4;color:var(--fg-muted)}
+  a.card .new{align-self:flex-start;font:700 11px/1 var(--font-sans);letter-spacing:.06em;color:var(--forest-700);background:var(--sage-25);padding:5px 8px;border-radius:var(--radius-xs)}
+  pre{margin:0;background:var(--forest-700);color:#FFFCF7;border-radius:var(--radius-card);padding:18px 20px;overflow-x:auto;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace}
+  pre .c{color:rgba(255,252,247,.6)}
+  .use{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .use h3{font:400 22px/1.1 var(--font-display);letter-spacing:-0.04em;color:var(--fg-strong);margin:0 0 10px}
+  footer{padding:28px 0 48px;border-top:1px solid var(--grey-300);font-size:13px;color:var(--fg-muted)}
+  @media (max-width:900px){.hero,.grid,.use{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body class="oh">
+<div class="wrap">
+  <header class="top"><img src="assets/logos/OptimalLogo-Green.png" alt="Optimal"><span>Design system · v1.1</span></header>
+  <div class="hero">
+    <div>
+      <h1>The Optimal <em>design system</em></h1>
+      <p>Tokens, type, voice, components and logos for every surface Optimal puts in front of people: the site, the app, social, decks and the clinic's own screens.</p>
+    </div>
+    <div class="stage">
+      <optimal-logo variant="stage" theme="dark" play="load" id="hero-logo"></optimal-logo>
+      <div class="stage-row"><span>&lt;optimal-logo&gt; · "Into Range"</span><button class="pill" type="button" id="replay">Replay</button></div>
+    </div>
+  </div>
+</div>
+
+<section><div class="wrap">
+  <h2>Foundations</h2>
+  <p>Single-purpose specimen cards, each built straight from <code>colors_and_type.css</code>.</p>
+  <div class="grid">
+    <a class="card" href="preview/color-brand.html"><b>Brand colour</b><span>Forest, deep accent, sage, navy</span></a>
+    <a class="card" href="preview/color-neutrals.html"><b>Neutrals</b><span>Cream and bone surfaces</span></a>
+    <a class="card" href="preview/color-greys.html"><b>Greys</b><span>The warm grey ramp</span></a>
+    <a class="card" href="preview/color-alpha.html"><b>Alpha</b><span>Rings, badges, capsules</span></a>
+    <a class="card" href="preview/color-semantic.html"><b>Semantic</b><span>bg, fg, border and link roles</span></a>
+    <a class="card" href="preview/type-website.html"><b>Type · website</b><span>Castoro display, Public Sans UI</span></a>
+    <a class="card" href="preview/type-app.html"><b>Type · app</b><span>Hanken Grotesk and Inter</span></a>
+    <a class="card" href="preview/spacing-and-shape.html"><b>Spacing and shape</b><span>Pills, 8 px cards, 4 px chrome</span></a>
+    <a class="card" href="preview/components.html"><b>Components</b><span>Buttons, chips, cards, accordion</span></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Brand</h2>
+  <p>Logos, the animated logo and iconography.</p>
+  <div class="grid">
+    <a class="card" href="preview/brand-logo.html"><b>Logo</b><span>Wordmarks, symbols, clearspace</span></a>
+    <a class="card" href="preview/brand-logo-animated.html"><span class="new">NEW IN 1.1</span><b>Animated logo</b><span>Stage and inline variants, light and dark</span></a>
+    <a class="card" href="preview/brand-icons.html"><b>Icons</b><span>The Iconify sets in use</span></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>UI <em>kits</em></h2>
+  <p>Hi-fi recreations from the 2024 Figma. Copy the markup, but take the address, prices and dates from the README's current facts.</p>
+  <div class="grid">
+    <a class="card" href="ui_kits/website/index.html"><b>Website</b><span>Hero to footer, desktop</span></a>
+    <a class="card" href="ui_kits/weight-loss-app/index.html"><b>Weight-loss app</b><span>Home, lessons, chat, progress</span></a>
+    <a class="card" href="Optimal%20Landing%20Page.html"><b>Landing page</b><span>A full page composed from the system</span></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Use it in a <em>project</em></h2>
+  <p>Pin a tag so a later change never restyles a shipped page.</p>
+  <div class="use">
+    <div><h3>Claude Code skill</h3><pre><span class="c"># in any repo, then cloud sessions pick it up</span>
+git submodule add \
+  https://github.com/Optimal-Research-Team/optimal-design-system \
+  .claude/skills/optimal-design-system</pre></div>
+    <div><h3>CDN</h3><pre><span class="c">&lt;!-- tokens + optional dark theme --&gt;</span>
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/
+  Optimal-Research-Team/optimal-design-system@v1.1.0/
+  colors_and_type.css"&gt;</pre></div>
+    <div><h3>npm</h3><pre>npm i github:Optimal-Research-Team/
+  optimal-design-system#v1.1.0
+
+<span class="c">import 'optimal-design-system/tokens.css'</span></pre></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Optimal Health · Barrie, Ontario · Source: <a href="https://github.com/Optimal-Research-Team/optimal-design-system" style="color:var(--forest-700)">github.com/Optimal-Research-Team/optimal-design-system</a></div></footer>
+<script>
+document.getElementById('replay').addEventListener('click', () => { const l = document.getElementById('hero-logo'); if (l.play) l.play(); });
+</script>
+</body></html>
