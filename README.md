@@ -9,6 +9,28 @@ The two surfaces share brand DNA — the same **dark forest green** (`#2C4E25`),
 
 ---
 
+## What's new in v1.3 (Oct 22, 2026)
+
+The micrograph layer: cell and tissue microscopy for research pages, explainers, social posts and film. It has two families, one on each of the system's grounds, so the images sit with the plates instead of fighting them.
+
+- **Fluorescence** (`assets/illustration/micrographs/fluorescence/`): cardiomyocytes, neurons, mitochondria in a fibroblast, a pancreatic islet, retinal vasculature, an oocyte in its follicle, a skeletal-muscle cross-section and an intestinal organoid. Each is graded onto night-950 `#0B1608` with one fixed three-stain palette: **leaf green** for structure, **coral** for the subject of the story, and **cyan** for nuclei.
+- **Brightfield** (`assets/illustration/micrographs/brightfield/`): H&E thyroid follicles, an H&E liver lobule, Masson's-trichrome trabecular bone and a Wright-stained blood smear. The slide is balanced to cream `#FCF8F1`.
+- **Field plates** (`assets/illustration/micrographs/field/`): 1600×1600 squares with a circular field of view and a ring accent, so the microscope eyepiece and the brand ring become one shape. Fluorescence fields sit on forest-night `#152511` and brightfield fields on cream.
+- Grading script: `tools/micrograph_grade.py`. Preview: `preview/micrographs.html`.
+
+**Rules for micrographs**
+- Fluorescence goes on Forest Night grounds and brightfield on cream, never the other way round.
+- One micrograph per frame. Don't set a micrograph beside a plate or a figure; in film they may follow one another as a shape rhyme (engraved neuron, then fluorescent neuron).
+- The stain palette is fixed: leaf green, coral and cyan. Don't recolour an image or add a fourth stain colour. Make new images with the recipe below and grade them with the script.
+- Fit the subject to the topic: the islet for metabolic health, the oocyte for menopause and fertility, cardiomyocytes for the heart, mitochondria or muscle for VO₂ max, the retina for vessels and ApoB, the blood smear for iron, thyroid follicles for the thyroid, trabecular bone for bone.
+- These images are generated and illustrative. Never present one as a member's sample, a lab result or the clinic's own research, and keep them out of the results page's data panels. Captions name the structure ("*Fig. 3* Cardiomyocytes"), not a protocol or an antibody.
+- Use them full-bleed or as a field plate, never as a rounded-card crop. Social and video exports take the same mild grain as everything else.
+
+**Recipe** (Higgsfield `gpt_image_2_5`, 16:9, quality high, 2k):
+- Fluorescence: "Confocal fluorescence micrograph of [cells or tissue]: [structure] stained leaf green, [subject] in warm coral, nuclei in cyan-blue. Deep near-black background with the faintest dark green tint. Realistic scientific immunofluorescence microscopy, rich saturated colour, high dynamic range. No text, no scale bar, no labels, no watermark."
+- Brightfield: "Brightfield light micrograph of a [stain]-stained section of [tissue] at [10x or 20x]: [what fills the frame]. Warm pale cream slide background. Realistic scientific histology, crisp cellular detail, natural stain colours, gentle vignette. No text, no scale bar, no labels, no watermark."
+- Then run `python3 tools/micrograph_grade.py <pngs> <film-out> assets/illustration/micrographs`.
+
 ## What's new in v1.2 (Oct 12, 2026)
 
 The illustration, motion and social layer, built for the @beoptimal.ca Instagram relaunch.
@@ -63,15 +85,15 @@ You can also run `git clone --depth 1 <url> .claude/skills/optimal-design-system
 **From a CDN.** jsDelivr serves the public repo. Pin a tag:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.2.0/colors_and_type.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.2.0/forest-night.css">
-<script src="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.2.0/assets/logos/optimal-logo.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.3.0/colors_and_type.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.3.0/forest-night.css">
+<script src="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.3.0/assets/logos/optimal-logo.js" defer></script>
 ```
 
 **From npm.** This installs straight from GitHub:
 
 ```bash
-npm i github:Optimal-Research-Team/optimal-design-system#v1.2.0
+npm i github:Optimal-Research-Team/optimal-design-system#v1.3.0
 ```
 
 ```js
@@ -292,6 +314,7 @@ These are served from `https://api.iconify.design/` via the `<iconify-icon>` web
 | `social.css` | Social layer (v1.2): 1080px frames, hatching, ring accents, capsules, stat numerals, keyword pill. |
 | `assets/illustration/` | Engraved plates, engravings and isometric figure stills (v1.2), WebP with transparency. |
 | `assets/textures/grain-1024.png` | Tileable film grain for social exports (v1.2). |
+| `assets/illustration/micrographs/` | Fluorescence and brightfield micrographs plus square field plates (v1.3), WebP. Grading script in `tools/micrograph_grade.py`. |
 | `assets/logos/optimal-logo.js` | `<optimal-logo>` animated logo web component (v1.1). |
 | `assets/motion/` | "Into Range" logo renders, cream and forest green, 16:9 / 9:16 / 1:1 (v1.1). |
 | `index.html` | Gallery of every preview card and UI kit, served on GitHub Pages. |
