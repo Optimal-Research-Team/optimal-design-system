@@ -1,7 +1,7 @@
 {
   "name": "optimal-design-system",
-  "version": "1.3.0",
-  "description": "Optimal Health (Barrie, ON) design system: tokens, type, voice, components, logos, the Forest night dark theme, the animated \"Into Range\" logo, the illustration layer and micrographs.",
+  "version": "1.4.0",
+  "description": "Optimal Health (Barrie, ON) design system: tokens, type, voice, components, logos, the Forest night dark theme, the animated \"Into Range\" logo, the illustration layer, micrographs, and the Specimen plates and motion plates.",
   "license": "UNLICENSED",
   "private": true,
   "repository": {

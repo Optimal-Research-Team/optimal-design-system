@@ -9,6 +9,42 @@ The two surfaces share brand DNA — the same **dark forest green** (`#2C4E25`),
 
 ---
 
+## What's new in v1.4 (Oct 24, 2026)
+
+The Specimen layer, from the *Specimen* concept film. It adds generated plates in four families, motion plates (the same plates as short moving clips), and the rules for conceptual brand films.
+
+**Generated plates** (`assets/illustration/specimen/`)
+- **Engraved** (`engraved/`): écorché (Vitruvian, with a cloth wrap), bronchial tree, iris, cochlea, spine, neuron, hand, alveoli, femur and heart. Each is transparent ink trimmed to the drawing, in the v1.2 convention: `name.webp` in forest ink `#183015` for cream grounds and `name-cream.webp` in cream ink for Forest Night.
+- **Red-chalk studies** (`chalk/`): heart, head and knee, 2560×1440 on their own cream paper. Red chalk is the only warm accent in its frame.
+- **Specimens on cream** (`specimens/`): dandelion, birch rings, fiddlehead, maple leaf, pomegranate, robin's egg, honeycomb and lichen stone. Each is one object on cream seamless `#FCF8F1`, 2560×1440.
+- **Ontario** (`ontario/`): oak in snow, delta, kettle lake, lightning over a lake, frost, a starling murmuration, lake ice, pine on granite, gneiss, maple canopy, surf, moonrise over lake ice and a birch forest. All are photo-graded, 2560×1440. Never caption one as a named real place.
+- Export script: `tools/specimen_export.py`. Preview: `preview/specimen.html`.
+
+**Motion plates** (`assets/illustration/specimen/motion/` has eight 1280×720 samples)
+
+Any plate can become a short moving clip: lungs breathe, an iris dilates, a heart beats, neurons fire, starlings flow, surf rolls in.
+1. **Generate.** Make an image-to-video clip from the plate, or from its original generation id, with Higgsfield `kling3_0` in mode `pro`, sound off. Use 3 s, or 5 s for a hold longer than about 2.5 s. The prompt is the subject's motion in one sentence, followed by its family's suffix:
+   - Engraved: "Locked-off camera: no zoom, no pan, no camera movement. Small, gentle movement only. It stays a flat Victorian steel engraving in dark green ink on cream paper in every frame: the same crisp cross-hatched line work, no colour, no solid black fills, no 3D, no photorealism. The cream paper stays still."
+   - Red chalk: "Locked-off camera: no zoom, no pan. It stays a red-chalk drawing on cream paper in every frame: the same loose chalk lines and construction grid, no colour change, no 3D, no photorealism. Small, gentle movement only."
+   - Specimen: "Locked-off camera: no zoom, no pan. The object stays in place on its cream seamless backdrop under soft studio light. Subtle motion only. Keep the exact colours and composition."
+   - Photograph: "Locked-off tripod camera: no zoom, no pan, no camera shake. Subtle, natural real-world motion only. Keep the exact colours, light and composition of the photograph."
+   - Micrograph: "Locked-off microscope view: no zoom, no pan, no rotation. A live-cell time-lapse. Keep the exact colours, the near-black background and the scientific microscopy look."
+2. **Grade it back to its still:** `python3 tools/motion_plate.py raw.mp4 still.jpg engraving|night|match out.mp4 [--graded-source]`. Engravings are re-mapped to the ink duotone, so any solid fills the model adds fall back into line work. Forest Night clips are inverted from the engraving clip rather than generated separately.
+3. **Play about 0.9 s of motion per shot.** In a short cut the clip runs up to 3× faster; holds play at 1×. `playback()` in the same script returns the media start and rate, and gives each reuse of a plate a different stretch of its clip. Use the first second or so: later frames can drift (a hand curls into a fist, nuclei turn into rings).
+4. **Check** that the engraving is still line work and that nothing flashes past the WCAG three-flashes rule (lightning, glints). If a later overlay depends on a subject's position, as the logo handoff depends on the moon, it must stay within a pixel of the still.
+
+**Rules for concept films**
+
+These apply to brand films with no voice or copy, like *Specimen*.
+- No words on screen: no captions, Fig. labels, plate counters, leader lines or taglines, and no numerals in the image. The film ends on the "Into Range" logo alone.
+- No ring accents drawn around subjects; the only ring is the logo's. A ring may come from a subject's own edge (the moon's limb) on its way to the logo's ring.
+- Living anatomy only: no skeletons, skulls or skeletal hands. Bone in cross-section and the spine as a study are fine. A longevity brand doesn't centre death.
+- Stills move: every plate plays as a motion plate.
+- Music is licensed, low-key, uplifting ambient in the Brian Eno vein: slow pads in a major or Lydian key, with no piano, no beat and nothing percussive. Never use a synthesized bed. Master to −15 LUFS with one static gain and a limiter, because single-pass loudnorm flattens the arc. Pixabay's and Mixkit's licences cover ads. Record each track's YouTube Content ID status; it doesn't affect Meta.
+- Deliver a 16:9 master plus 9:16, 1:1 and 1.91:1 for Meta, all full-bleed. Use 9:16 outpaints for photographs that a crop would lose. The Reels safe zone is 269 px at the top, 672 px at the bottom and 65 px at the sides.
+- Safety: a 2-frame floor, with dark frames grouped so light and dark never alternate more than three times a second (WCAG 2.3.1).
+- Everything here is generated and illustrative: no AI people or faces as photographs (drawn anatomy is fine), no clinic rooms and no generated text.
+
 ## What's new in v1.3 (Oct 22, 2026)
 
 The micrograph layer: cell and tissue microscopy for research pages, explainers, social posts and film. It has two families, one on each of the system's grounds, so the images sit with the plates instead of fighting them.
@@ -85,15 +121,15 @@ You can also run `git clone --depth 1 <url> .claude/skills/optimal-design-system
 **From a CDN.** jsDelivr serves the public repo. Pin a tag:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.3.0/colors_and_type.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.3.0/forest-night.css">
-<script src="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.3.0/assets/logos/optimal-logo.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.4.0/colors_and_type.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.4.0/forest-night.css">
+<script src="https://cdn.jsdelivr.net/gh/Optimal-Research-Team/optimal-design-system@v1.4.0/assets/logos/optimal-logo.js" defer></script>
 ```
 
 **From npm.** This installs straight from GitHub:
 
 ```bash
-npm i github:Optimal-Research-Team/optimal-design-system#v1.3.0
+npm i github:Optimal-Research-Team/optimal-design-system#v1.4.0
 ```
 
 ```js
