@@ -1,0 +1,57 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Film and fluted glass · forest satin, glass panes</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../forest-night.css">
+<link rel="stylesheet" href="../film.css">
+<script src="../assets/film/optimal-film.js" defer></script>
+<style>
+ html,body{margin:0;padding:0;width:700px;background:#FFFCF7;font-family:'Public Sans',sans-serif;color:#252525}
+ .wrap{padding:24px;display:flex;flex-direction:column;gap:22px}
+ .lab{font-size:11px;color:#76736D;text-transform:uppercase;font-weight:600;letter-spacing:.06em;margin:0 0 8px}
+ .frame{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;isolation:isolate}
+ .frame optimal-film{position:absolute;inset:0;z-index:-2}
+ .frame .film-shade{z-index:-1}
+ .frame .inner{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;padding:28px}
+ .frame h3{margin:0;font:400 38px/1 'Castoro',Georgia,serif;letter-spacing:-.03em;color:#F2F7EF}
+ .frame h3 em{color:#C9DDBF}
+ .frame p.k{margin:12px 0 0;font-size:12px;color:rgba(242,247,239,.75);max-width:30ch}
+ .glass b{display:block;font:400 30px/1 'Castoro',Georgia,serif;letter-spacing:-.02em}
+ .glass span{font-size:12px;color:var(--glass-muted)}
+ .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+ .t{margin:0;display:flex;flex-direction:column;gap:6px}
+ .t video,.t img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:6px}
+ .t figcaption{font:10.5px/1.3 ui-monospace,Menlo,monospace;color:#76736D}
+ table{width:100%;border-collapse:collapse;font-size:12px}
+ td{padding:7px 0;border-top:1px solid #E7E2D9;vertical-align:top} td:first-child{font:11px ui-monospace,Menlo,monospace;color:#76736D;width:150px}
+ .note{font-size:12px;color:#76736D;line-height:1.5;border:1px dashed #76736D;border-radius:6px;padding:14px 16px}
+ .note b{color:#252525;font-weight:500}
+</style></head><body><div class="wrap">
+<div class="note"><b>One film per page.</b> The hero, plus at most one band later on that reuses the same film. Words sit on the shade at the left, figures sit on glass, nothing sits straight on the film. Forest satin is the brand film.</div>
+
+<div><p class="lab">&lt;optimal-film&gt; · forest satin through fluted glass, with glass panes</p>
+<div class="frame">
+  <optimal-film src="../assets/film/forest-satin.mp4" poster="../assets/film/forest-satin.webp"></optimal-film>
+  <div class="film-shade"></div>
+  <div class="inner">
+    <div><h3>Into <em>range</em></h3><p class="k">Words on the shade, at the left. The reeds lean 17°, about seven across.</p></div>
+    <div class="glass-stack">
+      <article class="glass"><p class="glass-label">Glass pane</p><b>blur 26 · saturate 1.6</b><span>forest-tinted, grain, a sheen that follows the pointer</span></article>
+      <article class="glass"><p class="glass-label">Radius</p><b>20 px</b><span>--radius-glass, only for panes over film</span></article>
+    </div>
+  </div>
+</div></div>
+
+<div><p class="lab">Sources · assets/film/</p><div class="grid">
+  <figure class="t"><video src="../assets/film/forest-satin.mp4" autoplay muted loop playsinline preload="metadata"></video><figcaption>forest-satin.mp4 · 1280×720 · 6.6 s seamless loop · 0.6 MB</figcaption></figure>
+  <figure class="t"><img src="../assets/film/forest-satin.webp" alt="" loading="lazy"><figcaption>forest-satin.webp · the still and poster</figcaption></figure>
+</div></div>
+
+<div><p class="lab">Attributes and defaults</p><table>
+  <tr><td>src, poster</td><td>The film and its still. The still shows until the film has a frame, and stays if WebGL or the film is unavailable.</td></tr>
+  <tr><td>reeds = 7</td><td>Reeds across the frame. Each is clamped to 128–300 px.</td></tr>
+  <tr><td>strength = 0.7</td><td>How far each reed bends the film. It settles in from 1.3 when it first shows and thickens as it scrolls away.</td></tr>
+  <tr><td>still</td><td>Never play; draw the glass once. Reduced motion does the same.</td></tr>
+</table></div>
+</div></body></html>

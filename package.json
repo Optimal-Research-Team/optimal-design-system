@@ -1,7 +1,7 @@
 {
   "name": "optimal-design-system",
-  "version": "1.4.0",
-  "description": "Optimal Health (Barrie, ON) design system: tokens, type, voice, components, logos, the Forest night dark theme, the animated \"Into Range\" logo, the illustration layer, micrographs, and the Specimen plates and motion plates.",
+  "version": "1.5.0",
+  "description": "Optimal Health (Barrie, ON) design system: tokens, type, voice, components, logos, the Forest night dark theme, the animated \"Into Range\" logo, the illustration layer, micrographs, and the Specimen plates and motion plates, and film with fluted glass.",
   "license": "UNLICENSED",
   "private": true,
   "repository": {
@@ -14,6 +14,7 @@
     "SKILL.md",
     "colors_and_type.css",
     "forest-night.css",
+    "film.css",
     "assets/",
     "preview/",
     "tools/",
@@ -25,10 +26,13 @@
     "./forest-night.css": "./forest-night.css",
     "./optimal-logo.js": "./assets/logos/optimal-logo.js",
     "./assets/*": "./assets/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./film.css": "./film.css",
+    "./optimal-film.js": "./assets/film/optimal-film.js"
   },
   "sideEffects": [
     "*.css",
-    "./assets/logos/optimal-logo.js"
+    "./assets/logos/optimal-logo.js",
+    "./assets/film/optimal-film.js"
   ]
 }

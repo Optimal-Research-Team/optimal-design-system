@@ -9,6 +9,28 @@ The two surfaces share brand DNA — the same **dark forest green** (`#2C4E25`),
 
 ---
 
+## What's new in v1.5 (Oct 25, 2026)
+
+Film and fluted glass, from the Women's Health Assessment results page: a looping brand film seen through reeded glass, with frosted panes for figures over it, after Function Health's hero.
+
+- **The film** (`assets/film/`): `forest-satin.mp4` (1280×720, a 6.6 s seamless loop, 0.6 MB) and `forest-satin.webp`, its still and poster. Forest satin is the brand film.
+- **`<optimal-film>`** (`assets/film/optimal-film.js`, no dependencies): plays the film hidden and draws it through fluted glass in a fragment shader. The reeds lean 17°, about seven across the frame; each shows a slice a little wider than itself, so the folds repeat from reed to reed, with a bright lip, a dark seam and a hint of dispersion. The glass settles in when it first shows, leans with the pointer and thickens as it scrolls away. Attributes: `src`, `poster`, `reeds` (7), `strength` (0.7), `still`.
+- **`film.css`**: the hero and band layouts (`.film-hero`, `.film-band`, `.film-shade`, `.film-in`) and the glass pane (`.glass`, `.glass-stack`, `.glass-label`, `--radius-glass`): forest-tinted, `blur(26px) saturate(1.6)`, hairline edges, grain, a sheen that follows the pointer.
+- Loop tool: `tools/film_loop.sh`. Preview: `preview/film.html`.
+
+**Rules for film**
+- One film per page: the hero, plus at most one band later on that reuses the same film. Never behind body copy, tables or forms.
+- Words sit on the shade at the left, never straight on the film. Figures sit on glass panes.
+- Glass panes line up on one gutter: shared edges, equal gaps, one radius (`--radius-glass`, only for panes over film). The group may lean toward the pointer as one sheet; panes don't float at their own depths.
+- Forest satin is the brand film. Another colourway is for a product line that owns one, decided with Peter (the Women's Health plum is under review).
+- Reduced motion: the film doesn't play and the glass is drawn once. No WebGL, or a film that can't be read: the still shows. The film is decorative (`aria-hidden`), muted and silent.
+- No people, hands, text or objects in a film. Nothing flashes (WCAG 2.3.1).
+
+**Recipe**
+1. Make the still with Higgsfield `gpt_image_2_5`, 16:9: "Full-frame close-up of draped satin fabric in deep forest green (#2C4E25) with soft sage green and warm cream highlights along the folds. Long diagonal folds from lower left to upper right, a darker area on the left third, light catching the ridges on the right. Studio lighting, shallow depth of field, rich and calm, editorial luxury. No people, no hands, no text, no logos, no objects, fabric only."
+2. Animate it with Seedance 2.5 (`seedance_2_5`, mode `omni_reference`), using the still as both start and end frame, 8 s, 720p, sound off: "Locked-off camera, no cuts. Draped forest green satin fabric ripples very slowly, as if a soft breeze moves under it: long folds roll and shift, highlights glide along the ridges. Calm, luxurious, continuous motion. No people, no hands, no text, no objects. The final frame returns exactly to the opening composition."
+3. The model doesn't land exactly on the start frame, so crossfade the tail into the head: `tools/film_loop.sh raw.mp4 forest-satin.mp4`.
+
 ## What's new in v1.4 (Oct 24, 2026)
 
 The Specimen layer, from the *Specimen* concept film. It adds generated plates in four families, motion plates (the same plates as short moving clips), and the rules for conceptual brand films.
